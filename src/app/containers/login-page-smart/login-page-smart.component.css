@@ -1,0 +1,7 @@
+.image {
+  height: 100%;
+  background-size: cover;
+  width: auto;
+  background-image: url('http://theweddingparty.it/wp-content/uploads/2018/06/rawpixel-652547-unsplash-1500x630.jpg');
+  background-position: 50% 50%;
+}

@@ -1,0 +1,27 @@
+mat-card {
+  width: min-content;
+  opacity: 0.9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  color: blueviolet;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}

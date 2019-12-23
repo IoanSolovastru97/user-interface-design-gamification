@@ -1,0 +1,5 @@
+<div class="image">
+  <app-login-page [form]="form" (loginSubmit)="onLogin()"></app-login-page>
+
+  <p *ngIf="error">{{error}}</p>
+</div>
