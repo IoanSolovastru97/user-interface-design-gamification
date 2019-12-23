@@ -25,6 +25,7 @@ import {
   MatToolbarModule, MatTreeModule,
   MatSnackBarModule,
 } from '@angular/material';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -34,6 +35,9 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { HomePageSmartComponent } from './containers/home-page-smart/home-page-smart.component';
 import { LoginPageSmartComponent } from './containers/login-page-smart/login-page-smart.component';
+import { CoursesPageComponent } from './components/courses-page/courses-page.component';
+import { CoursesPageSmartComponent } from './containers/courses-page-smart/courses-page-smart.component';
+
 
 
 @NgModule({
@@ -42,9 +46,12 @@ import { LoginPageSmartComponent } from './containers/login-page-smart/login-pag
     LoginPageComponent,
     HomePageComponent,
     HomePageSmartComponent,
-    LoginPageSmartComponent
+    LoginPageSmartComponent,
+    CoursesPageComponent,
+    CoursesPageSmartComponent
   ],
   imports: [
+    MDBBootstrapModule.forRoot(),
     HttpClientModule,
     ReactiveFormsModule,
     BrowserModule,

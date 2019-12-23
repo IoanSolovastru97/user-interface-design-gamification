@@ -28,7 +28,7 @@ export class LoginPageSmartComponent implements OnInit {
     const username = this.form.get('username').value;
     const password = this.form.get('password').value;
     console.log(username + ' ' + password);
-    if (username === 'ono' && password === '123') {
+    if (username === 'user' && password === '123') {
       this.router.navigateByUrl('home');
       console.log("yeees");
     } else {
