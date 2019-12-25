@@ -37,6 +37,8 @@ import { HomePageSmartComponent } from './containers/home-page-smart/home-page-s
 import { LoginPageSmartComponent } from './containers/login-page-smart/login-page-smart.component';
 import { CoursesPageComponent } from './components/courses-page/courses-page.component';
 import { CoursesPageSmartComponent } from './containers/courses-page-smart/courses-page-smart.component';
+import { CoursePageComponent } from './components/course-page/course-page.component';
+import { CoursePageSmartComponent } from './containers/course-page-smart/course-page-smart.component';
 
 
 
@@ -48,7 +50,9 @@ import { CoursesPageSmartComponent } from './containers/courses-page-smart/cours
     HomePageSmartComponent,
     LoginPageSmartComponent,
     CoursesPageComponent,
-    CoursesPageSmartComponent
+    CoursesPageSmartComponent,
+    CoursePageComponent,
+    CoursePageSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),

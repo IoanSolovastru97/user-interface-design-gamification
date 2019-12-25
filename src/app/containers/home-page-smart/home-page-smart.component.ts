@@ -9,9 +9,13 @@ import {Router} from '@angular/router';
 })
 export class HomePageSmartComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router ) { }
 
   ngOnInit() {
+  }
+
+  logout() {
+    this.router.navigateByUrl('login');
   }
 
 }

@@ -16,7 +16,8 @@
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item">
-        <a class="nav-link" href="home">Home
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
         </a>
       </li>
 
@@ -34,8 +35,11 @@
 
     </ul>
     <!-- Links -->
+    <button class="logout_button" type="button" mdbBtn color="primary" (click)="logout()">Log Out</button>
+
   </div>
 
 </nav>
 
-<app-courses-page></app-courses-page>
+
+<app-courses-page (viewCourse)="onViewCourse($event)"></app-courses-page>

@@ -1,0 +1,36 @@
+<div class="course_intro text-center">
+  <h1><b>{{course.name}}</b></h1>
+  <h4>{{course.mainTeacher}}</h4>
+</div>
+
+<div class="first_row">
+  <div class="first_row_item">
+    <img src="https://i.ibb.co/XscYwHy/undraw-predictive-analytics-kf9n.png" alt="COURSES" border="0">
+  </div>
+  <div class="first_row_item">
+    <img src="https://i.ibb.co/1TDTph1/ui-ux1.png" alt="LABs" border="0">
+  </div>
+  <div class="upload_item">
+
+    <img src="https://i.ibb.co/4j4LmPs/undraw-going-up-ttm5.png" alt="UPLOAD" border="0">
+    <div class="uploadOptions">
+      <input id="file-input" type="file" (change)="onFileSelected($event)">
+      <button  mdbBtn color="primary" mdbWavesEffect type="button"
+               mdbPopover="Your file has been successfully uploaded!"
+               placement="top"
+               mdbPopoverHeader="Notification"
+               triggers="focus" mdbWavesEffect
+      [disabled]="!isSelectedFile">
+      Upload</button>
+    </div>
+  </div>
+</div>
+
+<div class="second_row">
+  <div class="first_row_item">
+    <img src="https://i.ibb.co/Cwp3mQ2/qa.jpg" alt="QA" border="0">
+  </div>
+  <div class="first_row_item">
+    <img src="https://i.ibb.co/YTJzgDz/ceva.jpg" alt="PROJECT" border="0">
+  </div>
+</div>

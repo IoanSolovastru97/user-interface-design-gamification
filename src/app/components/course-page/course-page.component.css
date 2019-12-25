@@ -1,0 +1,50 @@
+.course_intro {
+  padding-top: 10px;
+  color: dimgray;
+}
+
+.first_row {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.first_row_item>img {
+  width: 380px;
+  height: 280px;
+}
+
+.upload_item {
+  display: inline-grid;
+}
+
+.upload_item > img {
+  width: 380px;
+  height: 250px;
+}
+.second_row {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.second_row > div {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn {
+  padding: 0px;
+  width: 110px;
+  height: 30px;
+  margin: 0;
+}
+
+.uploadOptions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.uploadOptions > input {
+  width: 220px;
+}

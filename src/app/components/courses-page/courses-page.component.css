@@ -1,0 +1,23 @@
+.courses_view {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.card {
+  margin: 0 10px;
+  width: 350px;
+  height: 450px;
+}
+
+#a {
+  display: block;
+  margin: auto;
+}
+
+.go_to_course_page_button{
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
