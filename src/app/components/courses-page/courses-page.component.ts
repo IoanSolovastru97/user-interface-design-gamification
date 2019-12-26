@@ -14,7 +14,7 @@ export class CoursesPageComponent implements OnInit {
 
   @Output() viewCourse: EventEmitter<CourseCard> = new EventEmitter<CourseCard>();
 
-  constructor(private coursesService: CoursesService, private router: Router) { }
+  constructor(private coursesService: CoursesService) { }
 
   ngOnInit() {
     this.courses = this.coursesService.getAllCourses();

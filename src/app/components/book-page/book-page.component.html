@@ -1,0 +1,22 @@
+<div class="book_group">
+
+  <div class="book_details">
+    <b><h2>{{book.title}}</h2></b>
+    <h6>Author: {{book.author}}</h6>
+    <br>
+    <br>
+    <i><p>{{book.description}}</p></i>
+
+    <button type="button" mdbBtn color="primary" class="waves-light"
+            mdbPopover="The record has started!"
+            placement="right"
+            triggers="focus"
+            mdbPopoverHeader="Attention" mdbWavesEffect>
+      Read out loud
+    </button>
+
+  </div>
+
+  <img [src]="book.image" alt="BOOK" border="0">
+
+</div>

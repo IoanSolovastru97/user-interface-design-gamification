@@ -1,0 +1,19 @@
+.course_intro {
+  padding-top: 10px;
+  color: dimgray;
+}
+
+.books_table {
+  width: 400px;
+  margin-top: 70px;
+}
+
+.bibliography_group {
+  display: flex;
+  justify-content: center;
+}
+
+.bibliography_group>img {
+  width:600px;
+  height:450px;
+}

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CourseCard} from '../../core/models/course-card';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-course-page',
@@ -13,7 +14,7 @@ export class CoursePageComponent implements OnInit {
   @Input() course: CourseCard;
   isSelectedFile = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -24,6 +25,10 @@ export class CoursePageComponent implements OnInit {
     if (this.selectedFile) {
       this.isSelectedFile = true;
     }
+  }
+
+  seeBibliography() {
+    this.router.navigateByUrl('course/'+this.course.name + '/bibliography');
   }
 
 }
