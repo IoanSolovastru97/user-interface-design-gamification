@@ -41,6 +41,8 @@ import { CoursePageComponent } from './components/course-page/course-page.compon
 import { CoursePageSmartComponent } from './containers/course-page-smart/course-page-smart.component';
 import { BibliographyPageComponent } from './components/bibliography-page/bibliography-page.component';
 import { BibliographyPageSmartComponent } from './containers/bibliography-page-smart/bibliography-page-smart.component';
+import { BookPageComponent } from './components/book-page/book-page.component';
+import { BookPageSmartComponent } from './containers/book-page-smart/book-page-smart.component';
 
 
 
@@ -56,7 +58,9 @@ import { BibliographyPageSmartComponent } from './containers/bibliography-page-s
     CoursePageComponent,
     CoursePageSmartComponent,
     BibliographyPageComponent,
-    BibliographyPageSmartComponent
+    BibliographyPageSmartComponent,
+    BookPageComponent,
+    BookPageSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),

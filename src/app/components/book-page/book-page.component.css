@@ -1,0 +1,23 @@
+.book_group {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.book_group>img {
+  width: 400px;
+  height: 500px;
+}
+
+.book_details {
+  margin-top: 30px;
+  width: 500px;
+}
+
+.book_details>i>p {
+  width: 400px;
+}
+
+.book_details>button {
+  margin-top: 100px;
+}

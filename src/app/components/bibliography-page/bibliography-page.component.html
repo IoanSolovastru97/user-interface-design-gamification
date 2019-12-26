@@ -1,1 +1,19 @@
-<p>bibliography-page works!</p>
+<div class="course_intro text-center">
+  <h1><b>{{course.name}}</b></h1>
+  <h4>{{course.mainTeacher}}</h4>
+  <h2><b>Bibliography</b></h2>
+</div>
+
+<div class="bibliography_group">
+
+  <table class="books_table" mdbTable hover="true">
+    <tbody>
+    <tr mdbTableCol *ngFor="let el of books">
+      <th scope="row" (click)="sendBook(el)">{{el.title}}</th>
+    </tr>
+    </tbody>
+  </table>
+
+  <img src="https://i.ibb.co/3rJsqgv/undraw-book-lover-mkck-1.png" alt="undraw-book-lover-mkck-1" border="0">
+
+</div>
