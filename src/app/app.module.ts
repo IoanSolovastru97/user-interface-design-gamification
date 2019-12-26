@@ -39,6 +39,8 @@ import { CoursesPageComponent } from './components/courses-page/courses-page.com
 import { CoursesPageSmartComponent } from './containers/courses-page-smart/courses-page-smart.component';
 import { CoursePageComponent } from './components/course-page/course-page.component';
 import { CoursePageSmartComponent } from './containers/course-page-smart/course-page-smart.component';
+import { BibliographyPageComponent } from './components/bibliography-page/bibliography-page.component';
+import { BibliographyPageSmartComponent } from './containers/bibliography-page-smart/bibliography-page-smart.component';
 
 
 
@@ -52,7 +54,9 @@ import { CoursePageSmartComponent } from './containers/course-page-smart/course-
     CoursesPageComponent,
     CoursesPageSmartComponent,
     CoursePageComponent,
-    CoursePageSmartComponent
+    CoursePageSmartComponent,
+    BibliographyPageComponent,
+    BibliographyPageSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
