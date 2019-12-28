@@ -1,0 +1,73 @@
+<div class="chat_page">
+
+  <div class="contact_list">
+
+    <div class="container" style="background-color: aliceblue; margin-bottom: 5px;padding: 5px">
+      <img src="https://scontent.fomr1-1.fna.fbcdn.net/v/t1.0-1/p240x240/69589693_1380464562104457_4543072227951640576_o.jpg?_nc_cat=104&_nc_ohc=6Mk8ltxo5XMAQmfNf_zZBvDuKXTjn9MVAhn4xYmqHbZULY_Q_FdgJb1iw&_nc_ht=scontent.fomr1-1.fna&oh=d15c8fce2d08285492f2fed5f0ba5f32&oe=5E69B7A9" alt="Avatar" style="width:100%;">
+      <p><b>Andreea Gui</b></p>
+      <span style="color: green"><b>Online</b></span>
+    </div>
+
+    <div class="container" style="background-color: aliceblue; margin-bottom: 5px;padding: 5px">
+      <img src="https://scontent.fomr1-1.fna.fbcdn.net/v/t1.0-1/p240x240/13124953_1237020309649291_3166693166309383465_n.jpg?_nc_cat=103&_nc_ohc=m0Fa7n-wwVwAQmlCOuf0H-2WHfgWYFKO5_8bwP26uvmpA4RQLxdhZ2OTQ&_nc_ht=scontent.fomr1-1.fna&oh=88c28e337b224872118a5d2d6ff34392&oe=5EA800F7" alt="Avatar" style="width:100%;">
+      <p><b>Flavius Moldovan</b></p>
+      <span style="color: green"><b>Last seen 7 minutes ago</b></span>
+    </div>
+
+    <div class="container" style="background-color: lightsteelblue; margin-bottom: 5px;padding: 5px">
+      <img src="https://scontent.fomr1-1.fna.fbcdn.net/v/t1.0-1/c65.307.1229.1229a/s240x240/71577031_2667172213333016_714406799679160320_o.jpg?_nc_cat=110&_nc_ohc=LcR_IZCGfBEAQl1clrjkzuDgy-W22QBsJ5Gn1R_heKwxyyuXLCtCU_VlQ&_nc_ht=scontent.fomr1-1.fna&oh=5636321b447237663b9c185a9d5cde00&oe=5E6D2196" alt="Avatar" style="width:100%;">
+      <p><b>Ioana Onofrei</b></p>
+      <span style="color: green"><b>Online</b></span>
+    </div>
+
+    <div class="container" style="background-color: aliceblue; margin-bottom: 5px;padding: 5px" >
+      <img src="https://scontent.fomr1-1.fna.fbcdn.net/v/t1.0-1/c0.0.240.240a/p240x240/67604447_1808951502583452_2022153070623850496_o.jpg?_nc_cat=106&_nc_ohc=lYS1Dy1T3XgAQlxcIEdH3s8rSucxQeshVyotM63E8FWPTKuCp4Tgd7AmA&_nc_ht=scontent.fomr1-1.fna&oh=ccf80663939db97dd5f485a66d326ce3&oe=5E6B82C2" alt="Avatar" style="width:100%;">
+      <p><b>Narcisa Sirca</b></p>
+      <span style="color: green"><b>Last seen 12 minutes ago</b></span>
+    </div>
+
+    <div class="container" style="background-color: aliceblue; margin-bottom: 5px;padding: 5px">
+      <img src="https://scontent.fomr1-1.fna.fbcdn.net/v/t1.0-1/p240x240/80131723_2740586789335621_7844584915185172480_o.jpg?_nc_cat=104&_nc_ohc=ivmHmuKT56AAQmk33LHzbyahEyZVUeQSPtvDi10Eg5wOMJOEN92bwuYDA&_nc_ht=scontent.fomr1-1.fna&oh=95cd4fcb75888091cc880aaddca6c060&oe=5E72B78C" alt="Avatar" style="width:100%;">
+      <p><b>Nelu Solovastru</b></p>
+      <span style="color: green"><b>Last seen 12 minutes ago</b></span>
+    </div>
+
+    <div class="container" style="background-color: aliceblue; margin-bottom: 5px;padding: 5px">
+      <img src="https://thumbs.dreamstime.com/b/grupo-de-pessoas-estudantes-ou-local-de-trabalho-diverso-84806530.jpg" alt="Avatar" style="width:100%;">
+      <p><b>The Gamers</b></p>
+    </div>
+
+  </div>
+
+  <div class="message_view" id="messages">
+
+    <div class="container">
+      <img src="https://scontent.fomr1-1.fna.fbcdn.net/v/t1.0-1/c65.307.1229.1229a/s240x240/71577031_2667172213333016_714406799679160320_o.jpg?_nc_cat=110&_nc_ohc=LcR_IZCGfBEAQl1clrjkzuDgy-W22QBsJ5Gn1R_heKwxyyuXLCtCU_VlQ&_nc_ht=scontent.fomr1-1.fna&oh=5636321b447237663b9c185a9d5cde00&oe=5E6D2196" alt="Avatar" style="width:100%;">
+      <p>Hello. How are you today?</p>
+      <span class="time-right">11:00</span>
+    </div>
+
+    <div class="container darker">
+      <img src="http://www.hotavatars.com/wp-content/uploads/2019/01/I80W1Q0.png" alt="Avatar" class="right" style="width:100%;">
+      <p>Hey! I'm fine. Thanks for asking!</p>
+      <span class="time-left">11:01</span>
+    </div>
+
+    <div #div></div>
+
+    <form (submit)="sendMessage()">
+      <input id="inputText" [(ngModel)]="message" [ngModelOptions]="{standalone: true}" style="width: 87%; height: 40px">
+      <button type="submit" mdbBtn color="primary" mdbWavesEffect>SEND</button>
+    </form>
+
+  </div>
+
+  <div class="chat_options">
+    <img src="https://i.ibb.co/FXYgXtd/undraw-everywhere-together-bdmn.png" alt="VIDEO" border="0" (click)="startVideo()">
+    <img src="https://i.ibb.co/FBmRyKz/undraw-calling-kpbp-1.png" alt="AUDIO" border="0" (click)="startAudio()">
+    <img src="https://i.ibb.co/fx0mhPN/undraw-site-stats-l57q.png" alt="undraw-site-stats-l57q" border="0" (click)="startPoll()">
+  </div>
+
+
+
+</div>

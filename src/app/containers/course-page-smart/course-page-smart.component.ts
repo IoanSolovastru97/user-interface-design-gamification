@@ -28,9 +28,5 @@ export class CoursePageSmartComponent implements OnInit {
     }
   }
 
-  logout() {
-    this.router.navigateByUrl('login');
-  }
-
 
 }

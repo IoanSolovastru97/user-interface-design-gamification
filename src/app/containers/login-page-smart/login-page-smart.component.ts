@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {AppComponent} from '../../app.component';
 
 @Component({
   selector: 'app-login-page-smart',
@@ -29,8 +30,8 @@ export class LoginPageSmartComponent implements OnInit {
     const password = this.form.get('password').value;
     console.log(username + ' ' + password);
     if (username === 'user' && password === '123') {
+      sessionStorage.setItem('user',username);
       this.router.navigateByUrl('home');
-      console.log("yeees");
     } else {
       this.router.navigateByUrl('https://www.youtube.com/watch?v=TGIGj3jIC5A');
     }
