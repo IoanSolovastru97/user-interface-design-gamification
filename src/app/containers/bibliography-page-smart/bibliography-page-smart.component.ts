@@ -28,10 +28,6 @@ export class BibliographyPageSmartComponent implements OnInit {
     }
   }
 
-  logout() {
-    this.router.navigateByUrl('login');
-  }
-
   onViewBook(book: BibliographyBook) {
     this.router.navigateByUrl('book/' + book.title);
 

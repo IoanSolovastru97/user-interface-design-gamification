@@ -43,8 +43,11 @@ import { BibliographyPageComponent } from './components/bibliography-page/biblio
 import { BibliographyPageSmartComponent } from './containers/bibliography-page-smart/bibliography-page-smart.component';
 import { BookPageComponent } from './components/book-page/book-page.component';
 import { BookPageSmartComponent } from './containers/book-page-smart/book-page-smart.component';
-
-
+import { ChatPageComponent } from './components/chat-page/chat-page.component';
+import { ChatPageSmartComponent } from './containers/chat-page-smart/chat-page-smart.component';
+import { VideoRecordPopupComponent } from './components/chat-page/video-record-popup/video-record-popup.component';
+import { AudioRecordPopupComponent } from './components/chat-page/audio-record-popup/audio-record-popup.component';
+import { PollPopupComponent } from './components/chat-page/poll-popup/poll-popup.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,12 @@ import { BookPageSmartComponent } from './containers/book-page-smart/book-page-s
     BibliographyPageComponent,
     BibliographyPageSmartComponent,
     BookPageComponent,
-    BookPageSmartComponent
+    BookPageSmartComponent,
+    ChatPageComponent,
+    ChatPageSmartComponent,
+    VideoRecordPopupComponent,
+    AudioRecordPopupComponent,
+    PollPopupComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
@@ -76,6 +84,7 @@ import { BookPageSmartComponent } from './containers/book-page-smart/book-page-s
     MatAutocompleteModule, MatProgressSpinnerModule, MatMenuModule, MatTabsModule, MatTreeModule,
     MatSnackBarModule,
   ],
+  entryComponents: [ChatPageComponent,VideoRecordPopupComponent,AudioRecordPopupComponent,PollPopupComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

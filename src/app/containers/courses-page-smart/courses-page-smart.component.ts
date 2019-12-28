@@ -19,8 +19,4 @@ export class CoursesPageSmartComponent implements OnInit {
     this.router.navigateByUrl('course/' + course.name);
   }
 
-  logout() {
-    this.router.navigateByUrl('login');
-  }
-
 }
