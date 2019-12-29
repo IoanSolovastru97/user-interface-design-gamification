@@ -48,6 +48,8 @@ import { ChatPageSmartComponent } from './containers/chat-page-smart/chat-page-s
 import { VideoRecordPopupComponent } from './components/chat-page/video-record-popup/video-record-popup.component';
 import { AudioRecordPopupComponent } from './components/chat-page/audio-record-popup/audio-record-popup.component';
 import { PollPopupComponent } from './components/chat-page/poll-popup/poll-popup.component';
+import { SkillsPageComponent } from './components/skills-page/skills-page.component';
+import { SkillsPageSmartComponent } from './containers/skills-page-smart/skills-page-smart.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,9 @@ import { PollPopupComponent } from './components/chat-page/poll-popup/poll-popup
     ChatPageSmartComponent,
     VideoRecordPopupComponent,
     AudioRecordPopupComponent,
-    PollPopupComponent
+    PollPopupComponent,
+    SkillsPageComponent,
+    SkillsPageSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
