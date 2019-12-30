@@ -1,8 +1,64 @@
-<p> sunt pe homepage </p>
-<mat-tab-group>
-  <mat-tab label="First"> Content 1</mat-tab>
-  <mat-tab label="Second"> Content 2</mat-tab>
-  <mat-tab label="Third"> Content 3</mat-tab>
-</mat-tab-group>
+<h4> Academic Profile </h4>
+
+<section>
+
+  <img src="https://i.ibb.co/NpJ2J9p/avatar-f.jpg" alt="avatar-f" border="0">
+  <mat-tab-group>
+    <mat-tab label="General info">
+      <p> </p>
+      <p>
+        Technical University of Cluj-Napoca
+      </p>
+      <p>
+        Faculty of Computer Science
+      </p>
+    </mat-tab>
+    <mat-tab label="Badges">
+      <p> </p>
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </mat-tab>
+    <mat-tab label="Settings">
+      <p> </p>
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <!--Navbar-->
+  <mdb-navbar SideClass="navbar navbar-1 navbar-dark primary-color" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand>
+      <a class="navbar-brand" style="color: white">Skills</a>
+    </mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links>
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link waves-light" mdbWavesEffect>Languages
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Soft skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" href="skills/hard" mdbWavesEffect>Hard skills</a>
+        </li>
+      </ul>
+      <!-- Links -->
+    </links>
+    <!-- Collapsible content -->
+
+  </mdb-navbar>
+  <!--/.Navbar-->
+
+</section>
 
 

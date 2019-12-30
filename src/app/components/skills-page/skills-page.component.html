@@ -1,0 +1,104 @@
+<p>   </p>
+<section>
+  <h1>Hard skills</h1>
+  <i class="far fa-file-pdf fa-3x" (click)="frame.show()"></i>
+</section>
+
+<section>
+  <div style="display: block">
+    <h3>Programming languages</h3>
+    <canvas mdbChart
+            [chartType]="chartType"
+            [datasets]="chartDatasetProgrammingLanguages"
+            [labels]="chartLabelsProgrammingLanguages"
+            [colors]="chartColorsProgrammingLanguages"
+            [options]="chartOptions"
+            [legend]="true"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+    </canvas>
+  </div>
+
+  <div style="display: block">
+    <h3>Graphic design</h3>
+    <canvas mdbChart
+            [chartType]="chartType"
+            [datasets]="chartDatasets"
+            [labels]="chartLabels"
+            [colors]="chartColors"
+            [options]="chartOptions"
+            [legend]="true"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+    </canvas>
+  </div>
+</section>
+<h2> </h2>
+<section>
+  <div style="display: block">
+    <h3>Artificial Intelligence</h3>
+    <canvas mdbChart
+            [chartType]="chartType"
+            [datasets]="chartDatasetsAI"
+            [labels]="chartLabelsAI"
+            [colors]="chartColorsAI"
+            [options]="chartOptions"
+            [legend]="true"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+    </canvas>
+  </div>
+  <div style="display: block">
+    <h3>Web development</h3>
+    <canvas mdbChart
+            [chartType]="chartType"
+            [datasets]="chartDatasetsWeb"
+            [labels]="chartLabelsWeb"
+            [colors]="chartColorsWeb"
+            [options]="chartOptions"
+            [legend]="true"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+    </canvas>
+  </div>
+</section>
+
+
+<div mdbModal #frame="mdbModal" class="modal fade right modal-scrolling" id="frameModalTop" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: true}">
+  <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading">Export as PDF</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-5">
+
+            <img src="https://i.ibb.co/x2p1T2n/web.png" alt="web" border="0" class="img-fluid">
+          </div>
+
+          <div class="col-7">
+            <p>
+              <strong>Do you want to export as PDF?</strong>
+            </p>
+            <p>The content of this page will be saved on your device.</p>
+            <button type="button" mdbBtn color="info" class="waves-light"  (click)="frame.hide()" mdbWavesEffect>Export</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+

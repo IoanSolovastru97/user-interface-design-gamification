@@ -1,5 +1,5 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import {HomePageSmartComponent} from './containers/home-page-smart/home-page-smart.component';
 import {BibliographyPageSmartComponent} from './containers/bibliography-page-smart/bibliography-page-smart.component';
 import {LoginPageSmartComponent} from './containers/login-page-smart/login-page-smart.component';
@@ -9,6 +9,7 @@ import {BookPageSmartComponent} from './containers/book-page-smart/book-page-sma
 import {CoursePageSmartComponent} from './containers/course-page-smart/course-page-smart.component';
 import {QuizPageSmartComponent} from './containers/quiz-page-smart/quiz-page-smart.component';
 import {QuizCheckPageSmartComponent} from './containers/quiz-check-page-smart/quiz-check-page-smart.component';
+import {SkillsPageSmartComponent} from "./containers/skills-page-smart/skills-page-smart.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -20,13 +21,12 @@ const routes: Routes = [
   {path: 'course/:name/bibliography', component: BibliographyPageSmartComponent},
   {path: 'book/:title', component: BookPageSmartComponent},
   {path: 'course/:name/quiz', component: QuizPageSmartComponent},
-  {path: 'quiz-check', component: QuizCheckPageSmartComponent}
-
+  {path: 'quiz-check', component: QuizCheckPageSmartComponent},
+  {path: 'skills/hard', component: SkillsPageSmartComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule { }
