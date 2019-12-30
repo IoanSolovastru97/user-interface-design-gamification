@@ -25,7 +25,7 @@ import {
   MatToolbarModule, MatTreeModule,
   MatSnackBarModule,
 } from '@angular/material';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -43,11 +43,19 @@ import { BibliographyPageComponent } from './components/bibliography-page/biblio
 import { BibliographyPageSmartComponent } from './containers/bibliography-page-smart/bibliography-page-smart.component';
 import { BookPageComponent } from './components/book-page/book-page.component';
 import { BookPageSmartComponent } from './containers/book-page-smart/book-page-smart.component';
-import { ChatPageComponent } from './components/chat-page/chat-page.component';
-import { ChatPageSmartComponent } from './containers/chat-page-smart/chat-page-smart.component';
-import { VideoRecordPopupComponent } from './components/chat-page/video-record-popup/video-record-popup.component';
-import { AudioRecordPopupComponent } from './components/chat-page/audio-record-popup/audio-record-popup.component';
-import { PollPopupComponent } from './components/chat-page/poll-popup/poll-popup.component';
+import { RoomReservationSmartComponent } from './containers/room-reservation-smart/room-reservation-smart.component';
+import {CalendarCommonModule, CalendarModule, CalendarWeekModule, DateAdapter} from 'angular-calendar';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {adapterFactory} from 'angular-calendar/date-adapters/date-fns';
+import {CommonModule} from '@angular/common';
+import {NgbModalModule, NgbTimepickerModule} from '@ng-bootstrap/ng-bootstrap';
+import { CreateRoomReservationSmartComponent } from './containers/room-reservation-smart/create-room-reservation-smart/create-room-reservation-smart.component';
+import { EditRoomReservationSmartComponent } from './containers/room-reservation-smart/edit-room-reservation-smart/edit-room-reservation-smart.component';
+import { RoomReservationComponent } from './components/room-reservation/room-reservation.component';
+import { CreateRoomReservationComponent } from './components/room-reservation/create-room-reservation/create-room-reservation.component';
+import { EditRoomReservationComponent } from './components/room-reservation/edit-room-reservation/edit-room-reservation.component';
+
+
 
 @NgModule({
   declarations: [
@@ -64,17 +72,20 @@ import { PollPopupComponent } from './components/chat-page/poll-popup/poll-popup
     BibliographyPageSmartComponent,
     BookPageComponent,
     BookPageSmartComponent,
-    ChatPageComponent,
-    ChatPageSmartComponent,
-    VideoRecordPopupComponent,
-    AudioRecordPopupComponent,
-    PollPopupComponent
+    RoomReservationSmartComponent,
+    CreateRoomReservationSmartComponent,
+    EditRoomReservationSmartComponent,
+    RoomReservationComponent,
+    CreateRoomReservationComponent,
+    EditRoomReservationComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
-    ReactiveFormsModule,
     BrowserModule,
+    ReactiveFormsModule,
+    CommonModule,
+    NgbModalModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule, MatFormFieldModule, MatCardModule, MatTableModule, MatButtonModule, MatCheckboxModule,
@@ -82,9 +93,12 @@ import { PollPopupComponent } from './components/chat-page/poll-popup/poll-popup
     MatToolbarModule, MatDatepickerModule, MatSelectModule, FormsModule,
     MatNativeDateModule, MatExpansionModule, MatStepperModule, MatChipsModule, MatBadgeModule,
     MatAutocompleteModule, MatProgressSpinnerModule, MatMenuModule, MatTabsModule, MatTreeModule,
-    MatSnackBarModule,
+    MatSnackBarModule, CalendarCommonModule, CalendarWeekModule, MatTooltipModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }), NgbTimepickerModule
   ],
-  entryComponents: [ChatPageComponent,VideoRecordPopupComponent,AudioRecordPopupComponent,PollPopupComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

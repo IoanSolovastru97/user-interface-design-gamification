@@ -1,0 +1,113 @@
+<mat-horizontal-stepper linear #stepper>
+  <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Fill out the event start time</ng-template>
+      <div class="form-validation-container">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="reservationDate"
+                 required
+                 [min]="todayDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <ngb-timepicker formControlName="reservationStartForm" required [minuteStep]="15"></ngb-timepicker>
+        <div *ngIf="reservationStartForm.valid" class="small form-text text-success">Great choice</div>
+        <div class="small form-text text-danger" *ngIf="!reservationStartForm.valid">
+          <div *ngIf="reservationStartForm.errors['required']">Select a time between 08:00 - 20:45</div>
+          <div *ngIf="reservationStartForm.errors['tooLate']">Oh no, it's way too late</div>
+          <div *ngIf="reservationStartForm.errors['tooEarly']">It's a bit too early</div>
+        </div>
+
+        <div class="form-validation-container">
+          <button class='contact100-form-btn custom-button' matStepperNext>Next</button>
+        </div>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Fill out the event end time</ng-template>
+      <div class="form-validation-container">
+
+        <ngb-timepicker formControlName="reservationEndForm" required [minuteStep]="15"></ngb-timepicker>
+        <div *ngIf="reservationEndForm.valid" class="small form-text text-success">Great choice</div>
+        <div class="small form-text text-danger" *ngIf="!reservationEndForm.valid">
+          <div *ngIf="reservationEndForm.errors['required']">Select a time between {{startTime}} - 21:00</div>
+          <div *ngIf="reservationEndForm.errors['tooLate']">Oh no, it's way too late</div>
+          <div *ngIf="reservationEndForm.errors['tooEarly']">It's a bit too early</div>
+        </div>
+
+        <div class="form-validation-container">
+          <button class='contact100-form-btn custom-button' matStepperNext>Next</button>
+        </div>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step>
+    <form [formGroup]="thirdFormGroup" (ngSubmit)="createReservation.emit()">
+      <ng-template matStepLabel>{{stepThreeLabel}}</ng-template>
+      <div class="form-validation-container">
+        <div class="align-fields">
+          <mat-form-field class="col-md-2 field-space">
+            <mat-label>Pick a venue!</mat-label>
+            <mat-select formControlName="venueForm" required>
+              <mat-option>None</mat-option>
+              <mat-option *ngFor="let venue of venues" [value]="venue">
+                {{venue.name}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="venueForm.errors?.required">Please choose a venue</mat-error>
+            <mat-hint>{{venueForm.value?.description}}</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field class="col-md-2 field-space">
+            <mat-label>Pick an event type!</mat-label>
+            <mat-select formControlName="eventTypeForm" required>
+              <mat-option>None</mat-option>
+              <mat-option *ngFor="let eventType of eventTypes" [value]="eventType">
+                {{eventType.name}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="eventTypeForm.errors?.required">Please choose an event type</mat-error>
+            <mat-hint>{{eventTypeForm.value?.description}}</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field class="col-md-2 field-space">
+            <mat-label>Available Resources</mat-label>
+            <mat-select [(value)]="selectedResources" multiple>
+              <mat-option *ngFor="let resource of availableResources" [value]="resource">
+                {{resource.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="recurrent-container">
+          <mat-label class="recurrent-label">Make the event recurrent!</mat-label>
+          <button class="recurrent-button" type="button" (click)="changeRecurrence.emit()">
+            <i *ngIf="!recurrent" class="material-icons custom-icon" style="color: red">clear</i>
+            <i *ngIf="recurrent" class="material-icons custom-icon" style="color: dodgerblue">done</i>
+          </button>
+        </div>
+
+        <div class="buttons-align">
+          <div>
+            <button *ngIf="!eventTypeForm.invalid && !venueForm.invalid"
+                    [disabled]="eventTypeForm.invalid || venueForm.invalid"
+                    [ngClass]="{'contact100-form-btn custom-button button-space': eventTypeForm.invalid === false && venueForm.invalid === false}">
+							<span>
+								Submit
+							</span>
+            </button>
+          </div>
+          <div>
+            <button type="button" class='contact100-form-btn custom-button' (click)="stepper.reset()">Reset</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>

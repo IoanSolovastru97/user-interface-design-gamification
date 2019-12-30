@@ -15,20 +15,28 @@
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item" [routerLinkActive]="['active']" >
+      <li class="nav-item"  routerLinkActive="active" >
         <a class="nav-link" routerLink="home" >Home</a>
       </li>
 
-      <li class="nav-item" [routerLinkActive]="['active']" >
+      <li class="nav-item"  routerLinkActive="active" >
         <a class="nav-link"  routerLink="courses">Courses</a>
       </li>
 
-      <li class="nav-item" [routerLinkActive]="['active']" >
+      <li class="nav-item"  routerLinkActive="active" >
         <a class="nav-link" routerLink="#">Forum</a>
       </li>
 
-      <li class="nav-item" [routerLinkActive]="['active']" >
+      <li class="nav-item"  routerLinkActive="active" >
         <a class="nav-link" routerLink="chat">Chat</a>
+      </li>
+
+      <li class="nav-item"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: false}">
+        <a  class="nav-link"
+            routerLink="/room-reservation">Reservations
+        </a>
       </li>
 
     </ul>
@@ -38,7 +46,5 @@
   </div>
 
 </nav>
-
-
 
 <router-outlet></router-outlet>

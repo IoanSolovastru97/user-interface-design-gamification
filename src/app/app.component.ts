@@ -1,7 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {environment} from '../environments/environment';
-import {CometChat} from '@cometchat-pro/chat/CometChat';
-import appSettings = CometChat.appSettings;
+import {AfterViewChecked, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -9,16 +6,18 @@ import {Router} from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  implements OnInit {
+export class AppComponent  implements OnInit, AfterViewChecked {
   title = 'user-interface-design-gamification';
 
-  user : string;
+  user: string;
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private cdRef: ChangeDetectorRef) {
   }
 
   ngAfterViewChecked() {
     this.user = sessionStorage.getItem('user');
+    this.cdRef.detectChanges();
   }
 
   ngOnInit() {
@@ -28,7 +27,7 @@ export class AppComponent  implements OnInit {
   logout() {
     this.user = null;
     this.router.navigateByUrl('login');
+    sessionStorage.clear();
   }
 
 }
-

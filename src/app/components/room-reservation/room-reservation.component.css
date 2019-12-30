@@ -1,0 +1,116 @@
+h3 {
+  margin: 0 0 10px;
+  color: floralwhite;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+.resource-container{
+  display: inline-flex;
+}
+
+.resource-title-box{
+  margin-top: 20px;
+}
+
+.resource-container-title{
+  padding: 0 20px 0 8px;
+}
+
+.resource-date{
+  text-align: center;
+  padding: 5px 10px 0 30px;
+  font-size: x-large;
+}
+
+.main-container{
+  padding: 10px;
+  display: inline-flex;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  justify-content: center;
+}
+
+.left-container {
+  width: 40%;
+  height: auto;
+  align-self: flex-start;
+}
+
+.right-container {
+  width: 60%;
+  height: auto;
+  float: right;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.resource-list {
+  margin: 30px 0 2px 0;
+  list-style-type: none;
+  padding: 3px 0 0 0;
+  width: 90%;
+}
+.resource-list li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin-top: 5px;
+  padding: 10px 0;
+  height: auto;
+  border-radius: 4px;
+}
+.resource-list li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: 10px;
+}
+.resource-list li.selected {
+  background-color: #CFD8DC;
+  color: white;
+}
+.resource-list li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
+}
+.resource-list .badge {
+  display: inline-block;
+  font-size: medium;
+  color: white;
+  text-align: center;
+  padding: 18px 7px 0 7px;
+  background-color:#405061;
+  line-height: 10px;
+  position: relative;
+  left: 7px;
+  min-height: 50px;
+  width: 175px;
+  margin-right: 8px;
+  border-radius: 4px 4px 4px 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mat-tooltip {
+  font-size: 20px ;
+  display: inline;
+}
+
+.cal-event {
+  font-weight: bold;
+  font-size: 14px!important;
+}
+
+.btn.btn-outline-secondary,
+.btn.btn-outline-secondary:hover,
+.btn.btn-outline-secondary.waves-effect.waves-light:active{
+  border: 2px solid floralwhite!important;
+  background-color: floralwhite!important;
+  color: dodgerblue!important;
+  font-weight: bold;
+}

@@ -1,0 +1,71 @@
+<div class="main-container">
+
+  <div class="left-container">
+    <div class="row text-center">
+      <div class="col-sm-11 resource-title-box">
+        <h3 class="resource-container-title">Reserved Resources</h3>
+      </div>
+    </div>
+
+    <ul class="resource-list">
+      <li *ngFor="let resource of resources">
+        <div class="resource-container">
+          <span class="badge"
+                matTooltip={{resource.name}}
+                [matTooltipPosition]="position">{{resource.name}}</span>
+          <div class="resource-date">{{resource.date}}</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="right-container">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="btn-group">
+          <div
+            class="btn btn-primary"
+            mwlCalendarPreviousView
+            [view]="view"
+            [(viewDate)]="viewDate"
+          >
+            Previous
+          </div>
+          <div
+            class="btn btn-outline-secondary"
+            mwlCalendarToday
+            [(viewDate)]="viewDate"
+          >
+            Today
+          </div>
+          <div
+            class="btn btn-primary"
+            mwlCalendarNextView
+            [view]="view"
+            [(viewDate)]="viewDate"
+          >
+            Next
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+      </div>
+      <div class="col-md-4">
+        <div
+          class="btn btn-primary"
+          (click)="createReservation.emit()">Create Reservation
+        </div>
+      </div>
+    </div>
+    <br/>
+    <mwl-calendar-week-view
+      [dayStartHour]="8"
+      [dayEndHour]="20"
+      [viewDate]="viewDate"
+      [events]="events"
+      (eventClicked)="handleEvent.emit($event)"
+    >
+    </mwl-calendar-week-view>
+  </div>
+</div>

@@ -28,6 +28,7 @@ export class BibliographyPageSmartComponent implements OnInit {
     }
   }
 
+
   onViewBook(book: BibliographyBook) {
     this.router.navigateByUrl('book/' + book.title);
 
