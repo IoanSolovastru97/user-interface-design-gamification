@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -15,39 +15,46 @@ import {
   MatGridListModule,
   MatIconModule,
   MatInputModule,
-  MatListModule, MatMenuModule,
+  MatListModule,
+  MatMenuModule,
   MatNativeDateModule,
   MatProgressSpinnerModule,
   MatSelectModule,
   MatSidenavModule,
-  MatStepperModule,
-  MatTableModule, MatTabsModule,
-  MatToolbarModule, MatTreeModule,
   MatSnackBarModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTreeModule,
 } from '@angular/material';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { LoginPageComponent } from './components/login-page/login-page.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
-import { HomePageSmartComponent } from './containers/home-page-smart/home-page-smart.component';
-import { LoginPageSmartComponent } from './containers/login-page-smart/login-page-smart.component';
-import { CoursesPageComponent } from './components/courses-page/courses-page.component';
-import { CoursesPageSmartComponent } from './containers/courses-page-smart/courses-page-smart.component';
-import { CoursePageComponent } from './components/course-page/course-page.component';
-import { CoursePageSmartComponent } from './containers/course-page-smart/course-page-smart.component';
-import { BibliographyPageComponent } from './components/bibliography-page/bibliography-page.component';
-import { BibliographyPageSmartComponent } from './containers/bibliography-page-smart/bibliography-page-smart.component';
-import { BookPageComponent } from './components/book-page/book-page.component';
-import { BookPageSmartComponent } from './containers/book-page-smart/book-page-smart.component';
-import { ChatPageComponent } from './components/chat-page/chat-page.component';
-import { ChatPageSmartComponent } from './containers/chat-page-smart/chat-page-smart.component';
-import { VideoRecordPopupComponent } from './components/chat-page/video-record-popup/video-record-popup.component';
-import { AudioRecordPopupComponent } from './components/chat-page/audio-record-popup/audio-record-popup.component';
-import { PollPopupComponent } from './components/chat-page/poll-popup/poll-popup.component';
+import {LoginPageComponent} from './components/login-page/login-page.component';
+import {HomePageComponent} from './components/home-page/home-page.component';
+import {HomePageSmartComponent} from './containers/home-page-smart/home-page-smart.component';
+import {LoginPageSmartComponent} from './containers/login-page-smart/login-page-smart.component';
+import {CoursesPageComponent} from './components/courses-page/courses-page.component';
+import {CoursesPageSmartComponent} from './containers/courses-page-smart/courses-page-smart.component';
+import {CoursePageComponent} from './components/course-page/course-page.component';
+import {CoursePageSmartComponent} from './containers/course-page-smart/course-page-smart.component';
+import {BibliographyPageComponent} from './components/bibliography-page/bibliography-page.component';
+import {BibliographyPageSmartComponent} from './containers/bibliography-page-smart/bibliography-page-smart.component';
+import {BookPageComponent} from './components/book-page/book-page.component';
+import {BookPageSmartComponent} from './containers/book-page-smart/book-page-smart.component';
+import {ChatPageComponent} from './components/chat-page/chat-page.component';
+import {ChatPageSmartComponent} from './containers/chat-page-smart/chat-page-smart.component';
+import {VideoRecordPopupComponent} from './components/chat-page/video-record-popup/video-record-popup.component';
+import {AudioRecordPopupComponent} from './components/chat-page/audio-record-popup/audio-record-popup.component';
+import {PollPopupComponent} from './components/chat-page/poll-popup/poll-popup.component';
+import {QuizPageComponent} from './components/quiz-page/quiz-page.component';
+import {QuizPageSmartComponent} from './containers/quiz-page-smart/quiz-page-smart.component';
+import {QuizCheckPageComponent} from './components/quiz-check-page/quiz-check-page.component';
+import {QuizCheckPageSmartComponent} from './containers/quiz-check-page-smart/quiz-check-page-smart.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +75,11 @@ import { PollPopupComponent } from './components/chat-page/poll-popup/poll-popup
     ChatPageSmartComponent,
     VideoRecordPopupComponent,
     AudioRecordPopupComponent,
-    PollPopupComponent
+    PollPopupComponent,
+    QuizPageComponent,
+    QuizPageSmartComponent,
+    QuizCheckPageComponent,
+    QuizCheckPageSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
@@ -84,8 +95,9 @@ import { PollPopupComponent } from './components/chat-page/poll-popup/poll-popup
     MatAutocompleteModule, MatProgressSpinnerModule, MatMenuModule, MatTabsModule, MatTreeModule,
     MatSnackBarModule,
   ],
-  entryComponents: [ChatPageComponent,VideoRecordPopupComponent,AudioRecordPopupComponent,PollPopupComponent],
+  entryComponents: [ChatPageComponent, VideoRecordPopupComponent, AudioRecordPopupComponent, PollPopupComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

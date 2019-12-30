@@ -12,15 +12,16 @@ export class BibliographyPageComponent implements OnInit {
 
   books: BibliographyBook[];
   @Input() course: CourseCard;
-  @Output() viewBook: EventEmitter<BibliographyBook> =  new EventEmitter<BibliographyBook>();
+  @Output() viewBook: EventEmitter<BibliographyBook> = new EventEmitter<BibliographyBook>();
 
-  constructor(private bibligraphyService: BibliographyService) { }
+  constructor(private bibligraphyService: BibliographyService) {
+  }
 
   ngOnInit() {
     this.books = this.bibligraphyService.getAllBooks();
   }
 
-  sendBook(book : BibliographyBook){
+  sendBook(book: BibliographyBook) {
     this.viewBook.emit(book)
     console.log(book);
 

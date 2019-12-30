@@ -15,20 +15,33 @@
     <img src="https://i.ibb.co/4j4LmPs/undraw-going-up-ttm5.png" alt="UPLOAD" border="0">
     <div class="uploadOptions">
       <input id="file-input" type="file" (change)="onFileSelected($event)">
-      <button  mdbBtn color="primary" mdbWavesEffect type="button"
-               mdbPopover="Your file has been successfully uploaded!"
-               placement="top"
-               mdbPopoverHeader="Notification"
-               triggers="focus" mdbWavesEffect
-      [disabled]="!isSelectedFile">
-      Upload</button>
+      <button mdbBtn color="primary" mdbWavesEffect type="button"
+              mdbPopover="Your file has been successfully uploaded!"
+              placement="top"
+              mdbPopoverHeader="Notification"
+              triggers="focus" mdbWavesEffect
+              [disabled]="!isSelectedFile">
+        Upload
+      </button>
     </div>
   </div>
 </div>
 
 <div class="second_row">
-  <div class="first_row_item">
-    <img src="https://i.ibb.co/Cwp3mQ2/qa.jpg" alt="QA" border="0">
+  <div id="quiz_item">
+    <img src="https://i.ibb.co/MBNZDSX/quizz.png" alt="QUIZ" border="0">
+    <div class="quizOptions">
+      <input id="quiz-input" type="text" (change)="onEnterCode($event)">
+      <button mdbBtn color="primary" mdbWavesEffect type="button"
+              mdbPopover="Your quiz code is correct!"
+              placement="top"
+              mdbPopoverHeader="Notification"
+              triggers="focus" mdbWavesEffect
+              [disabled]="!isEnteredCode"
+              (click)="startQuiz()">
+        Ok
+      </button>
+    </div>
   </div>
   <div class="first_row_item">
     <img src="https://i.ibb.co/74Rh383/undraw-Books-l33t.png" alt="BILIOGRAPHY" border="0" (click)="seeBibliography()">

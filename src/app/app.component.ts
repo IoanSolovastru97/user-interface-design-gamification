@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {environment} from '../environments/environment';
 import {CometChat} from '@cometchat-pro/chat/CometChat';
-import appSettings = CometChat.appSettings;
 import {Router} from '@angular/router';
 
 @Component({
@@ -9,10 +7,10 @@ import {Router} from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  implements OnInit {
+export class AppComponent implements OnInit {
   title = 'user-interface-design-gamification';
 
-  user : string;
+  user: string;
 
   constructor(private router: Router) {
   }

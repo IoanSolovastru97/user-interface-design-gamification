@@ -1,0 +1,29 @@
+.container > div {
+  margin: 20px;
+}
+
+h2 {
+  margin-left: 41%;
+  margin-top: 10px;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+section > div {
+  width: 50%;
+}
+
+section > div > button {
+  margin-left: 30%;
+}
+
+#badge {
+  text-align: center;
+  color: #ffd926;
+  font-size: x-large;
+  font-weight: bold;
+
+}

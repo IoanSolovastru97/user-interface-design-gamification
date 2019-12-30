@@ -11,17 +11,17 @@ import {PollPopupComponent} from './poll-popup/poll-popup.component';
 })
 export class ChatPageComponent implements OnInit {
 
-  @ViewChild('div',null) div: ElementRef;
+  @ViewChild('div', null) div: ElementRef;
 
   message: string;
 
-  constructor (private renderer: Renderer2, public dialog: MatDialog){
+  constructor(private renderer: Renderer2, public dialog: MatDialog) {
   }
 
   ngOnInit() {
   }
 
-  sendMessage(){
+  sendMessage() {
 
     const img: HTMLImageElement = this.renderer.createElement('img');
     img.src = 'http://www.hotavatars.com/wp-content/uploads/2019/01/I80W1Q0.png';
@@ -32,7 +32,7 @@ export class ChatPageComponent implements OnInit {
     const p: HTMLParagraphElement = this.renderer.createElement('p');
     p.innerHTML = this.message;
 
-    const span  : HTMLSpanElement = this.renderer.createElement('span');
+    const span: HTMLSpanElement = this.renderer.createElement('span');
     span.className = 'time-left';
     span.innerText = '11:05';
 
@@ -40,7 +40,7 @@ export class ChatPageComponent implements OnInit {
     div.className = 'container darker';
 
     div.insertAdjacentElement('afterbegin', span);
-    div.insertAdjacentElement('afterbegin',p);
+    div.insertAdjacentElement('afterbegin', p);
     div.insertAdjacentElement('afterbegin', img);
 
     this.renderer.appendChild(this.div.nativeElement, div);
@@ -49,9 +49,9 @@ export class ChatPageComponent implements OnInit {
   }
 
   startVideo(): void {
-      const dialogRef = this.dialog.open(VideoRecordPopupComponent, {
-        width: '640px',
-      });
+    const dialogRef = this.dialog.open(VideoRecordPopupComponent, {
+      width: '640px',
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
@@ -60,9 +60,9 @@ export class ChatPageComponent implements OnInit {
 
   startAudio():
     void {
-      const dialogRef = this.dialog.open(AudioRecordPopupComponent, {
-        width: '640px',
-      });
+    const dialogRef = this.dialog.open(AudioRecordPopupComponent, {
+      width: '640px',
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
@@ -71,14 +71,14 @@ export class ChatPageComponent implements OnInit {
 
 
   startPoll(): void {
-  const dialogRef = this.dialog.open(PollPopupComponent, {
-    width: '970px',
-  });
+    const dialogRef = this.dialog.open(PollPopupComponent, {
+      width: '970px',
+    });
 
-  dialogRef.afterClosed().subscribe(result => {
-  console.log('The dialog was closed');
-});
-}
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 
 
 }

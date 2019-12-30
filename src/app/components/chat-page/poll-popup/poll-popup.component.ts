@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatDialogRef} from '@angular/material';
 
 @Component({
@@ -9,7 +9,8 @@ import {MatDialogRef} from '@angular/material';
 export class PollPopupComponent implements OnInit {
 
   constructor(
-    public dialogRef: MatDialogRef<PollPopupComponent>){}
+    public dialogRef: MatDialogRef<PollPopupComponent>) {
+  }
 
   ngOnInit() {
   }

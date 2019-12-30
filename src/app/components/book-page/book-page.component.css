@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-.book_group>img {
+.book_group > img {
   width: 400px;
   height: 500px;
 }
@@ -14,10 +14,10 @@
   width: 500px;
 }
 
-.book_details>i>p {
+.book_details > i > p {
   width: 400px;
 }
 
-.book_details>button {
+.book_details > button {
   margin-top: 100px;
 }

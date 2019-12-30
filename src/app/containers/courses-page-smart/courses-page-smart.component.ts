@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CourseCard} from '../../core/models/course-card';
 import {Router} from '@angular/router';
 

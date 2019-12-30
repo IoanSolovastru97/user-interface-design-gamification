@@ -9,7 +9,7 @@
   justify-content: space-evenly;
 }
 
-.first_row_item>img {
+.first_row_item > img {
   width: 380px;
   height: 280px;
 }
@@ -22,6 +22,7 @@
   width: 380px;
   height: 250px;
 }
+
 .second_row {
   padding: 10px 0px;
   display: flex;
@@ -47,4 +48,19 @@
 
 .uploadOptions > input {
   width: 220px;
+}
+
+.quizOptions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.quizOptions > input {
+  width: 200px;
+  margin-right: 10px;
+}
+
+.quiz_item > img {
+  width: 380px;
+  height: 240px;
 }

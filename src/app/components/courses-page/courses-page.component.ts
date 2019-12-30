@@ -1,7 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {CourseCard} from '../../core/models/course-card';
 import {CoursesService} from '../../core/services/courses.service';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-courses-page',
@@ -14,7 +13,8 @@ export class CoursesPageComponent implements OnInit {
 
   @Output() viewCourse: EventEmitter<CourseCard> = new EventEmitter<CourseCard>();
 
-  constructor(private coursesService: CoursesService) { }
+  constructor(private coursesService: CoursesService) {
+  }
 
   ngOnInit() {
     this.courses = this.coursesService.getAllCourses();
