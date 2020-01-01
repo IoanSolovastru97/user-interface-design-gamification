@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {AuthService} from '../../core/services/auth.service';
+import {AppConfig} from '../../app.config';
 
 @Component({
   selector: 'app-livestream-smart',
@@ -8,10 +10,14 @@ import {Router} from '@angular/router';
 })
 export class LivestreamSmartComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private authService: AuthService) {
   }
 
   ngOnInit() {
+    if (this.authService.user.role !== AppConfig.ROLE_PROFESSOR) {
+      this.router.navigate(['livestream/on']);
+    }
   }
 
   createNewSession() {

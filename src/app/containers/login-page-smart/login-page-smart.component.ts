@@ -30,6 +30,7 @@ export class LoginPageSmartComponent implements OnInit {
     const username = this.form.get('username').value;
     const password = this.form.get('password').value;
 
+
     const user = this.authService.onLogin(username, password);
     if (user) {
       this.authService.user = user;

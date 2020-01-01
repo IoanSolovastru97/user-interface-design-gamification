@@ -21,7 +21,8 @@ import {AuthGuard} from './auth.guard';
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginPageSmartComponent},
-  {path: 'home', component: HomePageSmartComponent},
+  // tslint:disable-next-line:max-line-length
+  {path: 'home', component: HomePageSmartComponent, data: [{role: 'PROFESSOR'}, {role: 'STUDENT'}, {role: 'GUEST'}] , canActivate : [AuthGuard]},
   {path: 'courses', component: CoursesPageSmartComponent},
   {path: 'course/:name', component: CoursePageSmartComponent},
   {path: 'course/:name/bibliography', component: BibliographyPageSmartComponent},
@@ -29,10 +30,10 @@ const routes: Routes = [
   {path: 'room-reservation', component: RoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
   {path: 'room-reservation/create', component: CreateRoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
   {path: 'room-reservation/:id', component: EditRoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
-  {path: 'livestream', component: LivestreamSmartComponent},
-  {path: 'livestream/on', component: LivestreamOnlineSmartComponent},
-  {path: 'livestream/on/debate', component: DebateTimeSmartComponent},
-  {path: 'livestream/on/mini-game', component: MiniGameSmartComponent},
+  {path: 'livestream', component: LivestreamSmartComponent },
+  {path: 'livestream/on', component: LivestreamOnlineSmartComponent, canActivate : [AuthGuard]},
+  {path: 'livestream/on/debate', component: DebateTimeSmartComponent, canActivate : [AuthGuard]},
+  {path: 'livestream/on/mini-game', component: MiniGameSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
 ];
 
 @NgModule({

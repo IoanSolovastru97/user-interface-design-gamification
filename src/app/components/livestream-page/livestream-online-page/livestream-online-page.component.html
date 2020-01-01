@@ -1,7 +1,7 @@
 <div class="main-container-livestream-online">
-  <h1>End the livestream</h1>
+  <h1 *ngIf="authService.isProfessor">End the livestream</h1>
 
-  <button class="btn btn-danger custom-button" (click)="endSession.emit()">End Session</button>
+  <button *ngIf="authService.isProfessor" class="btn btn-danger custom-button" (click)="endSession.emit()">End Session</button>
 
   <div class="video-preview">
     <button class="vertical-center">
@@ -20,7 +20,7 @@
     </button>
   </div>
 
-  <div class="button-container">
+  <div *ngIf="authService.isProfessor" class="button-container">
     <button class="btn btn-success custom-button" (click)="debateTime.emit()">Debate Time!</button>
     <div class="button-divider"></div>
     <button class="btn btn-info custom-button" (click)="miniGame.emit()">Mini-game!</button>

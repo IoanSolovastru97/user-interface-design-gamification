@@ -1,1 +1,46 @@
-<p>mini-game-page works!</p>
+<div class="main-container-livestream-online-game">
+
+  <div class="title-container-game">
+    <i class="material-icons stars-icon">stars</i>
+    <h1>Mini - Game</h1>
+    <i class="material-icons stars-icon">stars</i>
+  </div>
+
+  <div class="main-container-game">
+    <div class="left-container">
+      <div class="video-preview">
+      </div>
+    </div>
+
+    <div class="right-container">
+      <ul class="resource-list">
+        <li class="participants-list-header">
+          <div class="participants-list-header-container">
+            <div class="list-header-title col-2">#</div>
+            <div class="list-header-title col-1">Competitor</div>
+            <div class="list-header-title col-6">Badge</div>
+          </div>
+        </li>
+        <li class="participants-list-content" *ngFor="let participant of participants; let i = index">
+          <div class="participants-list-body-container">
+            <div class="list-header-title list-spacing col-2">{{i + 1}}</div>
+            <div class="list-header-title list-spacing col-1">{{participant.name}}</div>
+            <button mat-button class="list-header-title list-spacing badge-button col-6">
+              <mat-select [(value)]="participant.badge">
+                <mat-select-trigger>
+                  <mat-icon svgIcon="{{getIcon(i)}}"></mat-icon>
+                </mat-select-trigger>
+                <mat-option *ngFor="let icon of icons | keyvalue" value="{{icon.value}}">
+                  <mat-icon class="icon-size" svgIcon="{{icon.value}}"></mat-icon>{{beautifyWord.emit(icon.key)}}
+                </mat-option>
+              </mat-select>
+            </button>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="btn btn-primary custom-button" (click)="goBack.emit()">Back to stream</button>
+</div>

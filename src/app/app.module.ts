@@ -65,6 +65,7 @@ import { MiniGamePageComponent } from './components/livestream-page/livestream-o
 // tslint:disable-next-line:max-line-length
 import { DebateTimeSmartComponent } from './containers/livestream-smart/livestream-online-smart/debate-time-smart/debate-time-smart.component';
 import { MiniGameSmartComponent } from './containers/livestream-smart/livestream-online-smart/mini-game-smart/mini-game-smart.component';
+import {InlineSVGModule} from 'ng-inline-svg';
 
 
 
@@ -113,6 +114,7 @@ import { MiniGameSmartComponent } from './containers/livestream-smart/livestream
     MatNativeDateModule, MatExpansionModule, MatStepperModule, MatChipsModule, MatBadgeModule,
     MatAutocompleteModule, MatProgressSpinnerModule, MatMenuModule, MatTabsModule, MatTreeModule,
     MatSnackBarModule, CalendarCommonModule, CalendarWeekModule, MatTooltipModule,
+    InlineSVGModule.forRoot(),
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory

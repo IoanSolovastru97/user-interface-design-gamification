@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-mini-game-smart',
@@ -7,7 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiniGameSmartComponent implements OnInit {
 
-  constructor() { }
+  participants = [
+    {name: 'Spanju Gahahaha', badge: ''},
+    {name: 'Lily-Grachie', badge: ''},
+    {name: 'Leon', badge: ''},
+    {name: 'Rick', badge: ''},
+    {name: 'Joseph', badge: ''},
+
+  ];
+
+  goBack() {
+    this.router.navigate(['livestream/on']);
+  }
+
+  beautifyWord(optionString: any) {
+    return optionString.replace(/([A-Z])/g, ' $1').trim();
+  }
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
   }

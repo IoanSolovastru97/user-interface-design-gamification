@@ -1,1 +1,12 @@
-<p>debate-time-page works!</p>
+<div class="main-container-livestream-online-debate">
+  <h1>Debate Time!</h1>
+
+  <button *ngIf="authService.isProfessor" class="btn btn-danger custom-button" (click)="endDebate.emit()">End Debate</button>
+
+  <div class="video-preview">
+    <button class="vertical-center">
+      <h2>It's time to interact people</h2>
+      <i class="material-icons play-button">pause_circle_outline</i>
+    </button>
+  </div>
+</div>

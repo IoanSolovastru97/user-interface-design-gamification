@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {AuthService} from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-livestream-online-page',
@@ -22,7 +23,7 @@ export class LivestreamOnlinePageComponent implements OnInit {
   @Input()
   countVotesDown: number;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {IconService} from '../../../../core/services/icon.service';
+import {Icons} from '../../../../core/models/icons';
 
 @Component({
   selector: 'app-mini-game-page',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiniGamePageComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  participants: any;
+  @Output()
+  goBack: EventEmitter<any> = new EventEmitter();
+  @Output()
+  beautifyWord: EventEmitter<any> = new EventEmitter();
 
-  ngOnInit() {
+  icons = Icons;
+
+  constructor(private iconService: IconService) {
   }
 
+  ngOnInit() {
+    this.iconService.registerIcons();
+  }
+
+  getIcon(index: number) {
+    return this.participants[index].badge;
+  }
 }

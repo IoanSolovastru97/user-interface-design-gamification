@@ -1,0 +1,57 @@
+.main-container-livestream-online-debate {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center!important;
+}
+
+h1 {
+  margin: 25px 0 68px 0;
+  font-weight: bold;
+  color: dodgerblue;
+}
+
+h2 {
+  font-weight: bold;
+  color: dodgerblue;
+}
+
+.video-preview{
+  background-image: url('../../../../../resources/img/livestream-page/debate.png');
+  background-size: 100% 400px;
+  margin-top: 50px;
+  align-self: center;
+  width: 40%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.play-button{
+  font-size: 100px;
+  color: white;
+  cursor: pointer!important;
+}
+
+.vertical-center {
+  display: inline-block;
+  vertical-align: middle;    /* vertical alignment of the inline element */
+  height: 100%;
+  background: transparent;
+  border: none !important;
+  font-size: 0;
+  cursor: auto;
+}
+
+.vertical-center:focus,.vertical-center:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.custom-button {
+  border-radius: 25px;
+  width: 200px;
+  height: 60px;
+  align-self: center;
+}
+
+

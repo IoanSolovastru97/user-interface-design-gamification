@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {AuthService} from '../../../../core/services/auth.service';
 
 @Component({
   selector: 'app-debate-time-page',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DebateTimePageComponent implements OnInit {
 
-  constructor() { }
+  @Output()
+  endDebate: EventEmitter<any> = new EventEmitter();
+
+  constructor(private authService: AuthService) {
+  }
 
   ngOnInit() {
   }

@@ -14,11 +14,6 @@ export class AppComponent implements OnInit {
               private authService: AuthService) {
   }
 
-  /* ngAfterViewChecked() {
-     this.user = sessionStorage.getItem('user');
-     this.cdRef.detectChanges();
-   }*/
-
   ngOnInit() {
 
   }
