@@ -1,33 +1,32 @@
-import {AfterViewChecked, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {AuthService} from './core/services/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  implements OnInit, AfterViewChecked {
+export class AppComponent implements OnInit {
   title = 'user-interface-design-gamification';
 
-  user: string;
-
   constructor(private router: Router,
-              private cdRef: ChangeDetectorRef) {
+              private authService: AuthService) {
   }
 
-  ngAfterViewChecked() {
-    this.user = sessionStorage.getItem('user');
-    this.cdRef.detectChanges();
-  }
+  /* ngAfterViewChecked() {
+     this.user = sessionStorage.getItem('user');
+     this.cdRef.detectChanges();
+   }*/
 
   ngOnInit() {
 
   }
 
   logout() {
-    this.user = null;
+
+    this.authService.logout();
     this.router.navigateByUrl('login');
-    sessionStorage.clear();
   }
 
 }

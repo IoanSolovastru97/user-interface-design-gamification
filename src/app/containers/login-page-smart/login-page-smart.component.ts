@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {AuthService} from '../../core/services/auth.service';
 
 @Component({
   selector: 'app-login-page-smart',
@@ -10,31 +11,31 @@ import {Router} from '@angular/router';
 export class LoginPageSmartComponent implements OnInit {
 
   form: FormGroup;
-  error: string | null;
+  error: string;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {
+  constructor(private formBuilder: FormBuilder,
+              private router: Router,
+              private authService: AuthService) {
   }
 
 
   ngOnInit() {
-    this.error = null;
     this.form = this.formBuilder.group({
       username: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),
     });
-    this.onLogin();
   }
 
   onLogin() {
     const username = this.form.get('username').value;
     const password = this.form.get('password').value;
-    const user = 'user';
-    const pass = '123';
-    if (user === 'user' && pass === '123') {
-      sessionStorage.setItem('user', user);
+
+    const user = this.authService.onLogin(username, password);
+    if (user) {
+      this.authService.user = user;
       this.router.navigateByUrl('home');
     } else {
-      this.router.navigateByUrl('https://www.youtube.com/watch?v=TGIGj3jIC5A');
+      this.error = 'Login credentials are wrong!';
     }
   }
 }

@@ -49,11 +49,22 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {adapterFactory} from 'angular-calendar/date-adapters/date-fns';
 import {CommonModule} from '@angular/common';
 import {NgbModalModule, NgbTimepickerModule} from '@ng-bootstrap/ng-bootstrap';
+// tslint:disable-next-line:max-line-length
 import { CreateRoomReservationSmartComponent } from './containers/room-reservation-smart/create-room-reservation-smart/create-room-reservation-smart.component';
+// tslint:disable-next-line:max-line-length
 import { EditRoomReservationSmartComponent } from './containers/room-reservation-smart/edit-room-reservation-smart/edit-room-reservation-smart.component';
 import { RoomReservationComponent } from './components/room-reservation/room-reservation.component';
 import { CreateRoomReservationComponent } from './components/room-reservation/create-room-reservation/create-room-reservation.component';
 import { EditRoomReservationComponent } from './components/room-reservation/edit-room-reservation/edit-room-reservation.component';
+import { LivestreamSmartComponent } from './containers/livestream-smart/livestream-smart.component';
+import { LivestreamPageComponent } from './components/livestream-page/livestream-page.component';
+import { LivestreamOnlineSmartComponent } from './containers/livestream-smart/livestream-online-smart/livestream-online-smart.component';
+import { LivestreamOnlinePageComponent } from './components/livestream-page/livestream-online-page/livestream-online-page.component';
+import { DebateTimePageComponent } from './components/livestream-page/livestream-online-page/debate-time-page/debate-time-page.component';
+import { MiniGamePageComponent } from './components/livestream-page/livestream-online-page/mini-game-page/mini-game-page.component';
+// tslint:disable-next-line:max-line-length
+import { DebateTimeSmartComponent } from './containers/livestream-smart/livestream-online-smart/debate-time-smart/debate-time-smart.component';
+import { MiniGameSmartComponent } from './containers/livestream-smart/livestream-online-smart/mini-game-smart/mini-game-smart.component';
 
 
 
@@ -77,7 +88,15 @@ import { EditRoomReservationComponent } from './components/room-reservation/edit
     EditRoomReservationSmartComponent,
     RoomReservationComponent,
     CreateRoomReservationComponent,
-    EditRoomReservationComponent
+    EditRoomReservationComponent,
+    LivestreamSmartComponent,
+    LivestreamPageComponent,
+    LivestreamOnlineSmartComponent,
+    LivestreamOnlinePageComponent,
+    DebateTimePageComponent,
+    MiniGamePageComponent,
+    DebateTimeSmartComponent,
+    MiniGameSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),

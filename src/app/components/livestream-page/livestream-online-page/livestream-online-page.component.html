@@ -1,0 +1,28 @@
+<div class="main-container-livestream-online">
+  <h1>End the livestream</h1>
+
+  <button class="btn btn-danger custom-button" (click)="endSession.emit()">End Session</button>
+
+  <div class="video-preview">
+    <button class="vertical-center">
+      <i class="material-icons play-button">pause_circle_outline</i>
+    </button>
+  </div>
+  <div class="icon-container">
+    <button class="icon-button" (click)="voteUp.emit()">
+      <i class="material-icons custom-icon">thumb_up</i>
+    </button>
+    <span class="label">{{countVotesUp}}</span>
+    <div class="custom-divider"></div>
+    <span class="label">{{countVotesDown}}</span>
+    <button class="icon-button" (click)="voteDown.emit()">
+      <i class="material-icons custom-icon">thumb_down</i>
+    </button>
+  </div>
+
+  <div class="button-container">
+    <button class="btn btn-success custom-button" (click)="debateTime.emit()">Debate Time!</button>
+    <div class="button-divider"></div>
+    <button class="btn btn-info custom-button" (click)="miniGame.emit()">Mini-game!</button>
+  </div>
+</div>

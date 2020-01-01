@@ -7,20 +7,32 @@ import {CoursesPageSmartComponent} from './containers/courses-page-smart/courses
 import {BookPageSmartComponent} from './containers/book-page-smart/book-page-smart.component';
 import {CoursePageSmartComponent} from './containers/course-page-smart/course-page-smart.component';
 import {RoomReservationSmartComponent} from './containers/room-reservation-smart/room-reservation-smart.component';
+// tslint:disable-next-line:max-line-length
 import {CreateRoomReservationSmartComponent} from './containers/room-reservation-smart/create-room-reservation-smart/create-room-reservation-smart.component';
+// tslint:disable-next-line:max-line-length
 import {EditRoomReservationSmartComponent} from './containers/room-reservation-smart/edit-room-reservation-smart/edit-room-reservation-smart.component';
+import {LivestreamSmartComponent} from './containers/livestream-smart/livestream-smart.component';
+import {LivestreamOnlineSmartComponent} from './containers/livestream-smart/livestream-online-smart/livestream-online-smart.component';
+// tslint:disable-next-line:max-line-length
+import {DebateTimeSmartComponent} from './containers/livestream-smart/livestream-online-smart/debate-time-smart/debate-time-smart.component';
+import {MiniGameSmartComponent} from './containers/livestream-smart/livestream-online-smart/mini-game-smart/mini-game-smart.component';
+import {AuthGuard} from './auth.guard';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginPageSmartComponent},
   {path: 'home', component: HomePageSmartComponent},
   {path: 'courses', component: CoursesPageSmartComponent},
   {path: 'course/:name', component: CoursePageSmartComponent},
   {path: 'course/:name/bibliography', component: BibliographyPageSmartComponent},
   {path: 'book/:title', component: BookPageSmartComponent},
-  {path: 'room-reservation', component: RoomReservationSmartComponent},
-  {path: 'room-reservation/create', component: CreateRoomReservationSmartComponent},
-  {path: 'room-reservation/:id', component: EditRoomReservationSmartComponent},
+  {path: 'room-reservation', component: RoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
+  {path: 'room-reservation/create', component: CreateRoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
+  {path: 'room-reservation/:id', component: EditRoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
+  {path: 'livestream', component: LivestreamSmartComponent},
+  {path: 'livestream/on', component: LivestreamOnlineSmartComponent},
+  {path: 'livestream/on/debate', component: DebateTimeSmartComponent},
+  {path: 'livestream/on/mini-game', component: MiniGameSmartComponent},
 ];
 
 @NgModule({
