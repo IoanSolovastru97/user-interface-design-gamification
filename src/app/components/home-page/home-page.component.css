@@ -1,0 +1,26 @@
+section{
+  display:flex;
+  justify-content:space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+section > img{
+  width: 23%;
+}
+
+section > mat-tab-group{
+  width: 55%;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+section > mdb-navbar{
+  width: 20%;
+}
+
+h4{
+  margin-left: 43%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}

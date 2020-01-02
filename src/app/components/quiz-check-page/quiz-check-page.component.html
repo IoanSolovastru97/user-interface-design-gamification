@@ -1,0 +1,109 @@
+<h2>Quiz - answers check </h2>
+<div class="container">
+  <div>
+    <p>1. Software designed to facilitate conversations between a computer and a human-end user is called:</p>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="defaultUnchecked1" name="defaultExampleRadios1" disabled
+             mdbInput>
+      <label class="custom-control-label" for="defaultUnchecked1">Real time messaging</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="defaultUnchecked2" name="defaultExampleRadios1" disabled
+             mdbInput>
+      <label class="custom-control-label" for="defaultUnchecked2">Interactive voice response</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="defaultUnchecked3" name="defaultExampleRadios1" disabled
+             checked mdbInput>
+      <label class="custom-control-label" for="defaultUnchecked3">Chatbot</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="defaultUnchecked4" name="defaultExampleRadios1" disabled
+             mdbInput>
+      <label class="custom-control-label" for="defaultUnchecked4">Walkie Talkie</label>
+    </div>
+  </div>
+  <div>
+    <p>2. Which are clustering algorithms?</p>
+    <mdb-checkbox [default]="true" [disabled]="true" [checked]="true">K-means</mdb-checkbox>
+    <mdb-checkbox [default]="true" [disabled]="true" [checked]="false">Kruskal</mdb-checkbox>
+    <mdb-checkbox [default]="true" [disabled]="true" [checked]="true">DBSCAN</mdb-checkbox>
+    <mdb-checkbox [default]="true" [disabled]="true" [checked]="true">Agglomerative Hierarchical</mdb-checkbox>
+  </div>
+  <div>
+    <p>3. Mention 3 of the GUI development phases:</p>
+    <div class="md-form">
+      <input value=" Project proposals, Low fidelity prototype, Heuristic evaluation" mdbInput type="text"
+             id="form1" class="form-control" [disabled]="true">
+      <label for="form1" class="">Answer</label>
+    </div>
+  </div>
+  <div>
+    <p>4. The optimal time complexity for sorting algorithms is:</p>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="ud1" name="defaultExampleRadios" disabled mdbInput>
+      <label class="custom-control-label" for="ud1">n^2</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="ud2" name="defaultExampleRadios" disabled checked mdbInput>
+      <label class="custom-control-label" for="ud2">n(log n)</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="ud3" name="defaultExampleRadios" disabled mdbInput>
+      <label class="custom-control-label" for="ud3">log n</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="ud4" name="defaultExampleRadios" disabled mdbInput>
+      <label class="custom-control-label" for="ud4">2*n+1</label>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div>
+    <button type="button" mdbBtn color="light" mdbWavesEffect>Go back</button>
+  </div>
+  <div>
+    <button type="button" mdbBtn color="primary" (click)="frame.show()" mdbWavesEffect>Submit</button>
+  </div>
+</section>
+
+<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Quiz result</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <mdb-icon fas icon="award" size="4x" color="warning" class="mb-3 animated rotateIn"></mdb-icon>
+          <p>100 / 100</p>
+          <p>Congratulations! You checked one more level!</p>
+          <p>You gained: </p>
+          <p id="badge">Master Badge</p>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" mdbBtn color="success" class="waves-effect" (click)="goToProfile()" mdbWavesEffect>Check badges
+          <!--          <mdb-icon far icon="gem" class="ml-1"></mdb-icon>-->
+          <i class="fas fa-trophy"></i>
+        </a>
+        <a type="button" mdbBtn color="success" outline="true" class="waves-effect" mdbWavesEffect
+           (click)="goToCourses()">Course page</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>

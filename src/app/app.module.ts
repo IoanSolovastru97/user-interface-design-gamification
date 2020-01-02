@@ -15,15 +15,18 @@ import {
   MatGridListModule,
   MatIconModule,
   MatInputModule,
-  MatListModule, MatMenuModule,
+  MatListModule,
+  MatMenuModule,
   MatNativeDateModule,
   MatProgressSpinnerModule,
   MatSelectModule,
   MatSidenavModule,
-  MatStepperModule,
-  MatTableModule, MatTabsModule,
-  MatToolbarModule, MatTreeModule,
   MatSnackBarModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTreeModule,
 } from '@angular/material';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { AppRoutingModule } from './app-routing.module';
@@ -68,6 +71,17 @@ import { MiniGameSmartComponent } from './containers/livestream-smart/livestream
 import {InlineSVGModule} from 'ng-inline-svg';
 
 
+import { ChatPageComponent } from './components/chat-page/chat-page.component';
+import { ChatPageSmartComponent } from './containers/chat-page-smart/chat-page-smart.component';
+import { VideoRecordPopupComponent } from './components/chat-page/video-record-popup/video-record-popup.component';
+import { AudioRecordPopupComponent } from './components/chat-page/audio-record-popup/audio-record-popup.component';
+import { PollPopupComponent } from './components/chat-page/poll-popup/poll-popup.component';
+import { SkillsPageComponent } from './components/skills-page/skills-page.component';
+import { SkillsPageSmartComponent } from './containers/skills-page-smart/skills-page-smart.component';
+import {QuizPageComponent} from './components/quiz-page/quiz-page.component';
+import {QuizPageSmartComponent} from './containers/quiz-page-smart/quiz-page-smart.component';
+import {QuizCheckPageComponent} from './components/quiz-check-page/quiz-check-page.component';
+import {QuizCheckPageSmartComponent} from './containers/quiz-check-page-smart/quiz-check-page-smart.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +111,18 @@ import {InlineSVGModule} from 'ng-inline-svg';
     DebateTimePageComponent,
     MiniGamePageComponent,
     DebateTimeSmartComponent,
-    MiniGameSmartComponent
+    MiniGameSmartComponent,
+    ChatPageComponent,
+    ChatPageSmartComponent,
+    VideoRecordPopupComponent,
+    AudioRecordPopupComponent,
+    PollPopupComponent,
+    QuizPageComponent,
+    QuizPageSmartComponent,
+    QuizCheckPageComponent,
+    QuizCheckPageSmartComponent,
+    SkillsPageComponent,
+    SkillsPageSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
@@ -120,6 +145,7 @@ import {InlineSVGModule} from 'ng-inline-svg';
       useFactory: adapterFactory
     }), NgbTimepickerModule
   ],
+  entryComponents: [ChatPageComponent, VideoRecordPopupComponent, AudioRecordPopupComponent, PollPopupComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

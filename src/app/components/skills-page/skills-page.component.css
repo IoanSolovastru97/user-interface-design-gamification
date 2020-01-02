@@ -1,0 +1,10 @@
+section{
+  display:flex;
+  justify-content:space-between;
+  margin: 5%;
+}
+
+section > div{
+  width: 100%;
+  height: 100%;
+}

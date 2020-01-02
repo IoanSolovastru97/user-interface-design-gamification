@@ -1,0 +1,227 @@
+<h2>Quiz</h2>
+<section>
+  <div id="time-div">
+    <p>Total time:   {{initialTime}}</p>
+    <p>Seconds Left: {{timeLeft}}</p>
+  </div>
+  <div id="question-div">
+    <p>Total questions:   {{questionsToBeAnswered}}</p>
+    <p>Answered questions: {{count}}</p>
+  </div>
+</section>
+
+
+<div class="container">
+  <div class="row1">
+    <button type="button" id="11" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal1.show(); remove('11');" mdbWavesEffect>1
+    </button>
+    <button type="button" id="12" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal2.show(); remove('12');" mdbWavesEffect>2
+    </button>
+    <button type="button" id="13" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal3.show(); remove('13');" mdbWavesEffect>3
+    </button>
+    <button type="button" id="14" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal4.show(); remove('14');" mdbWavesEffect>4
+    </button>
+  </div>
+  <div class="row2">
+    <button type="button" id="21" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('21');" mdbWavesEffect>5
+    </button>
+    <button type="button" id="22" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('22');" mdbWavesEffect>6
+    </button>
+    <button type="button" id="23" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('23');" mdbWavesEffect>7
+    </button>
+    <button type="button" id="24" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('24');" mdbWavesEffect>8
+    </button>
+  </div>
+  <div class="row3">
+    <button type="button" id="31" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('31');" mdbWavesEffect>9
+    </button>
+    <button type="button" id="32" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('32');" mdbWavesEffect>10
+    </button>
+    <button type="button" id="33" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('33');" mdbWavesEffect>11
+    </button>
+    <button type="button" id="34" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('34');" mdbWavesEffect>12
+    </button>
+  </div>
+  <div class="row4">
+    <button type="button" id="41" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('41');" mdbWavesEffect>13
+    </button>
+    <button type="button" id="42" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('42');" mdbWavesEffect>14
+    </button>
+    <button type="button" id="43" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('43');" mdbWavesEffect>15
+    </button>
+    <button type="button" id="44" mdbBtn color="primary" class="relative waves-light"
+            (click)="basicModal.show(); remove('44');" mdbWavesEffect>16
+    </button>
+  </div>
+
+</div>
+
+<div mdbModal #basicModal1="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal1.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="myModalLabel1">Question 1</h4>
+      </div>
+      <div class="modal-body">
+        <p>Software designed to facilitate conversations between a computer and a human-end user is called:</p>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="defaultUnchecked1" name="defaultExampleRadios" mdbInput>
+          <label class="custom-control-label" for="defaultUnchecked1">Real time messaging</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="defaultUnchecked2" name="defaultExampleRadios" mdbInput>
+          <label class="custom-control-label" for="defaultUnchecked2">Interactive voice response</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="defaultUnchecked3" name="defaultExampleRadios" mdbInput>
+          <label class="custom-control-label" for="defaultUnchecked3">Chatbot</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="defaultUnchecked4" name="defaultExampleRadios" mdbInput>
+          <label class="custom-control-label" for="defaultUnchecked4">Walkie Talkie</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
+                (click)="basicModal1.hide();  checkIfFinished()" mdbWavesEffect>Close
+        </button>
+        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div mdbModal #basicModal2="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal2.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="myModalLabel2">Question 2</h4>
+      </div>
+      <div class="modal-body">
+        <p>Which are clustering algorithms?</p>
+        <mdb-checkbox [default]="true">K-means</mdb-checkbox>
+        <mdb-checkbox [default]="true">Kruskal</mdb-checkbox>
+        <mdb-checkbox [default]="true">DBSCAN</mdb-checkbox>
+        <mdb-checkbox [default]="true">Agglomerative Hierarchical</mdb-checkbox>
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
+                (click)="basicModal2.hide();  checkIfFinished()" mdbWavesEffect>Close
+        </button>
+        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div mdbModal #basicModal3="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal3.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="myModalLabel3">Question 3</h4>
+      </div>
+      <div class="modal-body">
+        <p>Mention 3 of the GUI development phases:</p>
+        <div class="md-form">
+          <input mdbInput type="text" id="form1" class="form-control">
+          <label for="form1" class="">Answer</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
+                (click)="basicModal3.hide();  checkIfFinished()" mdbWavesEffect>Close
+        </button>
+        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div mdbModal #basicModal4="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal4.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="myModalLabel4">Question 4</h4>
+      </div>
+      <div class="modal-body">
+        <p>The optimal time complexity for sorting algorithms is:</p>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="ud1" name="defaultExampleRadios" mdbInput>
+          <label class="custom-control-label" for="ud1">n^2</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="ud2" name="defaultExampleRadios" mdbInput>
+          <label class="custom-control-label" for="ud2">n(log n)</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="ud3" name="defaultExampleRadios" mdbInput>
+          <label class="custom-control-label" for="ud3">log n</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="ud4" name="defaultExampleRadios" mdbInput>
+          <label class="custom-control-label" for="ud4">2*n+1</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
+                (click)="basicModal4.hide();  checkIfFinished()" mdbWavesEffect>Close
+        </button>
+        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="myModalLabel">Question x</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
+                (click)="basicModal.hide();  checkIfFinished()" mdbWavesEffect>Close
+        </button>
+        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save!</button>
+      </div>
+    </div>
+  </div>
+</div>
