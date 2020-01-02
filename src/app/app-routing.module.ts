@@ -9,7 +9,7 @@ import {BookPageSmartComponent} from './containers/book-page-smart/book-page-sma
 import {CoursePageSmartComponent} from './containers/course-page-smart/course-page-smart.component';
 import {QuizPageSmartComponent} from './containers/quiz-page-smart/quiz-page-smart.component';
 import {QuizCheckPageSmartComponent} from './containers/quiz-check-page-smart/quiz-check-page-smart.component';
-import {SkillsPageSmartComponent} from "./containers/skills-page-smart/skills-page-smart.component";
+import {SkillsPageSmartComponent} from './containers/skills-page-smart/skills-page-smart.component';
 import {RoomReservationSmartComponent} from './containers/room-reservation-smart/room-reservation-smart.component';
 // tslint:disable-next-line:max-line-length
 import {CreateRoomReservationSmartComponent} from './containers/room-reservation-smart/create-room-reservation-smart/create-room-reservation-smart.component';
@@ -34,7 +34,7 @@ const routes: Routes = [
   {path: 'book/:title', component: BookPageSmartComponent},
   {path: 'course/:name/quiz', component: QuizPageSmartComponent},
   {path: 'quiz-check', component: QuizCheckPageSmartComponent},
-  {path: 'skills/hard', component: SkillsPageSmartComponent}
+  {path: 'skills/hard', component: SkillsPageSmartComponent},
   {path: 'room-reservation', component: RoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
   {path: 'room-reservation/create', component: CreateRoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
   {path: 'room-reservation/:id', component: EditRoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
