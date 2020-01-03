@@ -1,0 +1,107 @@
+<h4> Professor's Page </h4>
+
+<section>
+
+  <div class ="professionalInfo">
+<!--    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar-m" border="0">-->
+    <img class ="prof-img" src="assets/img/avatars/prof.png" alt="avatar-m" border="0">
+
+    <mdb-icon class = "selected-icon" far [icon] =  this.displayedIcon  size="3x" (click)="frame.show()"></mdb-icon>
+
+    <img class = "info-img" src="assets/img/professor/prof-info.PNG" alt="prof-info" border="0">
+
+  </div>
+
+  <mat-tab-group>
+    <mat-tab label="General info">
+      <p> </p>
+      <p>
+        Technical University of Cluj-Napoca
+      </p>
+      <p>
+        Faculty of Computer Science
+      </p>
+    </mat-tab>
+    <mat-tab label="Research">
+      <p> </p>
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </mat-tab>
+    <mat-tab label="CV">
+      <p> </p>
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+</section>
+
+<div mdbModal #frame="mdbModal" class="modal fade top " id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Evaluate your teacher</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+
+        <div class="emojis">
+          <mdb-icon fas icon="angry" size="3x"  (click) ="selectIcon('angry')"></mdb-icon>
+          <mdb-icon fas icon="tired" size="3x" (click) ="selectIcon('tired' )"></mdb-icon>
+          <mdb-icon fas icon="grimace" size="3x"  (click) ="selectIcon('grimace')"></mdb-icon>
+          <mdb-icon fas icon="smile-beam" size="3x" (click) ="selectIcon('smile-beam')"></mdb-icon>
+          <mdb-icon fas icon="grin-hearts" size="3x" (click) ="selectIcon('grin-hearts')"></mdb-icon>
+        </div>
+
+        <div class="questions" >
+          <p></p>
+          <p>Course attendance: </p>
+          <mdb-checkbox [default]="true">0%-20% </mdb-checkbox>
+          <mdb-checkbox [default]="true">20%-40% </mdb-checkbox>
+          <mdb-checkbox [default]="true">40%-60% </mdb-checkbox>
+          <mdb-checkbox [default]="true">60%-80% </mdb-checkbox>
+          <mdb-checkbox [default]="true">80%-100% </mdb-checkbox>
+          <p></p>
+          <p>Laboratory attendance: </p>
+          <mdb-checkbox [default]="true">0%-20% </mdb-checkbox>
+          <mdb-checkbox [default]="true">20%-40% </mdb-checkbox>
+          <mdb-checkbox [default]="true">40%-60% </mdb-checkbox>
+          <mdb-checkbox [default]="true">60%-80% </mdb-checkbox>
+          <mdb-checkbox [default]="true">80%-100% </mdb-checkbox>
+          <p></p>
+          <p>Quality of the support materials: </p>
+          <mdb-checkbox [default]="true">0%-20%</mdb-checkbox>
+          <mdb-checkbox [default]="true">20%-40%</mdb-checkbox>
+          <mdb-checkbox [default]="true">40%-60%</mdb-checkbox>
+          <mdb-checkbox [default]="true">60%-80%</mdb-checkbox>
+          <mdb-checkbox [default]="true">80%-100%</mdb-checkbox>
+          <p></p>
+        </div>
+        <div class="input-div">
+          <p>Your opinion: </p>
+          <input class="input-text" type="text"  placeholder="insert text here ...">
+        </div>
+
+      </div>
+
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" mdbBtn color="success" outline="true" class="waves-effect" mdbWavesEffect (click)="frame.hide(); submit()">Submit</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+
