@@ -5,4 +5,7 @@ export class CourseCard {
   mainTeacher: string;
   secondTeacher: string;
   thirdTeacher: string;
+  numberOfCredits: number;
+  isLocked: boolean;
+  isCompleted: boolean;
 }

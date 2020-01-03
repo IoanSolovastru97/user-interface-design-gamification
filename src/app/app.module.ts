@@ -82,6 +82,8 @@ import {QuizPageComponent} from './components/quiz-page/quiz-page.component';
 import {QuizPageSmartComponent} from './containers/quiz-page-smart/quiz-page-smart.component';
 import {QuizCheckPageComponent} from './components/quiz-check-page/quiz-check-page.component';
 import {QuizCheckPageSmartComponent} from './containers/quiz-check-page-smart/quiz-check-page-smart.component';
+import { CoursesEnrollmentComponent } from './components/courses-enrollment/courses-enrollment.component';
+import { CoursesEnrollmentSmartComponent } from './containers/courses-enrollment-smart/courses-enrollment-smart.component';
 
 @NgModule({
   declarations: [
@@ -122,7 +124,9 @@ import {QuizCheckPageSmartComponent} from './containers/quiz-check-page-smart/qu
     QuizCheckPageComponent,
     QuizCheckPageSmartComponent,
     SkillsPageComponent,
-    SkillsPageSmartComponent
+    SkillsPageSmartComponent,
+    CoursesEnrollmentComponent,
+    CoursesEnrollmentSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),

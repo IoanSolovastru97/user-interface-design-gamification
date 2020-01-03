@@ -1,14 +1,14 @@
 <div class="col" >
 
-  <div class = "initClass">
-    <button class="initButton" mdbBtn color="blue" mdbWavesEffect (click)="initCourses()">Init my classbook </button>
-  </div>
-
-  <div class="courses_view ">
+  <div class="courses_view col-lg-8 ">
     <div *ngFor="let course of courses">
-      <mdb-card>
+      <mdb-card >
 
         <mdb-card-img [src]="course.cover" alt="Card image cap" style="height: 200px"></mdb-card-img>
+
+        <mdb-card-img class="isLocked" [src]="course.isLocked ? 'assets/img/enroll/locked.png'
+        : !course.isCompleted ? 'assets/img/enroll/unlocked.png'
+        : 'assets/img/enroll/completed.png' "></mdb-card-img>
 
         <mdb-card-body>
 

@@ -5,6 +5,7 @@ import {BibliographyPageSmartComponent} from './containers/bibliography-page-sma
 import {LoginPageSmartComponent} from './containers/login-page-smart/login-page-smart.component';
 import {ChatPageSmartComponent} from './containers/chat-page-smart/chat-page-smart.component';
 import {CoursesPageSmartComponent} from './containers/courses-page-smart/courses-page-smart.component';
+import {CoursesEnrollmentSmartComponent} from './containers/courses-enrollment-smart/courses-enrollment-smart.component';
 import {BookPageSmartComponent} from './containers/book-page-smart/book-page-smart.component';
 import {CoursePageSmartComponent} from './containers/course-page-smart/course-page-smart.component';
 import {QuizPageSmartComponent} from './containers/quiz-page-smart/quiz-page-smart.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   // tslint:disable-next-line:max-line-length
   {path: 'home', component: HomePageSmartComponent, data: [{role: 'PROFESSOR'}, {role: 'STUDENT'}, {role: 'GUEST'}] , canActivate : [AuthGuard]},
   {path: 'courses', component: CoursesPageSmartComponent},
+  {path: 'enroll', component: CoursesEnrollmentSmartComponent},
   {path: 'chat', component: ChatPageSmartComponent},
   {path: 'course/:name', component: CoursePageSmartComponent},
   {path: 'course/:name/bibliography', component: BibliographyPageSmartComponent},
