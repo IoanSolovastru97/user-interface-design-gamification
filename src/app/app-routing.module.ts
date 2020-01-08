@@ -23,6 +23,8 @@ import {DebateTimeSmartComponent} from './containers/livestream-smart/livestream
 import {MiniGameSmartComponent} from './containers/livestream-smart/livestream-online-smart/mini-game-smart/mini-game-smart.component';
 import {AuthGuard} from './auth.guard';
 
+import {ProfessorPageSmartComponent} from './containers/professor-page-smart/professor-page-smart.component';
+
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginPageSmartComponent},
@@ -30,6 +32,7 @@ const routes: Routes = [
   {path: 'home', component: HomePageSmartComponent, data: [{role: 'PROFESSOR'}, {role: 'STUDENT'}, {role: 'GUEST'}] , canActivate : [AuthGuard]},
   {path: 'courses', component: CoursesPageSmartComponent},
   {path: 'enroll', component: CoursesEnrollmentSmartComponent},
+  {path: 'professor', component: ProfessorPageSmartComponent},
   {path: 'chat', component: ChatPageSmartComponent},
   {path: 'course/:name', component: CoursePageSmartComponent},
   {path: 'course/:name/bibliography', component: BibliographyPageSmartComponent},
