@@ -88,6 +88,8 @@ import { ProfessorPageComponent } from './components/professor-page/professor-pa
 import { ProfessorPageSmartComponent } from './containers/professor-page-smart/professor-page-smart.component';
 import { TeamSupportComponent } from './components/team-support/team-support.component';
 import { TeamSupportSmartComponent } from './containers/team-support-smart/team-support-smart.component';
+import { TeamStudentsComponent } from './components/team-students/team-students.component';
+import { TeamStudentsSmartComponent } from './containers/team-students-smart/team-students-smart.component';
 
 @NgModule({
   declarations: [
@@ -134,7 +136,9 @@ import { TeamSupportSmartComponent } from './containers/team-support-smart/team-
     ProfessorPageComponent,
     ProfessorPageSmartComponent,
     TeamSupportComponent,
-    TeamSupportSmartComponent
+    TeamSupportSmartComponent,
+    TeamStudentsComponent,
+    TeamStudentsSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),

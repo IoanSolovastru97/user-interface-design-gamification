@@ -8,6 +8,7 @@ export class StudentsService {
 
   students: Student[] = [
     {
+      id: 1,
       name: 'Gui Andreea',
       innovation: 90,
       teamwork: 80,
@@ -15,6 +16,7 @@ export class StudentsService {
       communication: 67
     },
     {
+      id: 2,
       name: 'Sirca Narcisa',
       innovation: 85,
       teamwork: 20,
@@ -22,6 +24,7 @@ export class StudentsService {
       communication: 90
     },
     {
+      id: 3,
       name: 'Moldovan Flaviu',
       innovation: 90,
       teamwork: 80,
@@ -29,6 +32,7 @@ export class StudentsService {
       communication: 44
     },
     {
+      id: 4,
       name: 'Onofrei Ioana',
       innovation: 70,
       teamwork: 90,
@@ -36,6 +40,7 @@ export class StudentsService {
       communication: 67
     },
     {
+      id: 5,
       name: 'Solovastru Ioan',
       innovation: 82,
       teamwork: 67,
@@ -43,6 +48,7 @@ export class StudentsService {
       communication: 67
     },
     {
+      id: 6,
       name: 'Pop Ionut Andrei',
       innovation: 45,
       teamwork: 50,
@@ -50,6 +56,7 @@ export class StudentsService {
       communication: 50
     },
     {
+      id: 7,
       name: 'Muresan Ancuta',
       innovation: 32,
       teamwork: 87,

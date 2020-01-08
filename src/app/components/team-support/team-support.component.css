@@ -1,0 +1,41 @@
+.courses_view {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.card {
+  margin: 0 10px;
+  width: 350px;
+  height: 450px;
+}
+
+.mdb-card-img {
+  width:100%;
+  height: 40%;
+
+}
+#a {
+  display: block;
+  margin: auto;
+}
+
+.go_to_course_page_button {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.initClass {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.initButton {
+  position : relative;
+  top:25%;
+  margin-top : 20px;
+}

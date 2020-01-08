@@ -36,7 +36,7 @@ export class TeamService {
       name: 'Gamification in teaching activities at university level',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsDtMM9zYzR56XkMIgUR7jtVKWQLARKJSdhdDpFtO5_I1Hprd5FQ&s',
       // tslint:disable-next-line:max-line-length
-      description: 'This project aims to stimulate the participation of students to the educational process and to propose solutions for an increased awareness on their part. The approach of this project is to include principles from the gamification theory in the recurring teaching activities and to propose simple and efficient management instruments by the teaching staff and the students as well.',
+      description: 'This project aims to stimulate the participation of students to the educational process and to propose solutions for an increased awareness on their part.',
       persons: [],
       numberOfPersons: 3,
       innovation: 0,

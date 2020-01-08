@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Team} from '../../core/models/team';
+import {TeamService} from '../../core/services/team.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-team-support',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamSupportComponent implements OnInit {
 
-  constructor() { }
+  teams: Team[];
+
+  constructor(private teamService: TeamService, private router: Router) { }
 
   ngOnInit() {
+    this.teams = this.teamService.getAllTeams();
+
   }
 
+  newTeam(team) {
+      this.router.navigateByUrl('teamStudents');
+  }
 }

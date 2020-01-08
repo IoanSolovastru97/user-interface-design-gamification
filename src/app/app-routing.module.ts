@@ -25,6 +25,7 @@ import {AuthGuard} from './auth.guard';
 
 import {ProfessorPageSmartComponent} from './containers/professor-page-smart/professor-page-smart.component';
 import {TeamSupportSmartComponent} from './containers/team-support-smart/team-support-smart.component';
+import {TeamStudentsSmartComponent} from './containers/team-students-smart/team-students-smart.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -36,6 +37,8 @@ const routes: Routes = [
   {path: 'professor', component: ProfessorPageSmartComponent},
   {path: 'chat', component: ChatPageSmartComponent},
   {path: 'teamsupport', component: TeamSupportSmartComponent},
+  {path: 'teamStudents', component: TeamStudentsSmartComponent},
+
   {path: 'course/:name', component: CoursePageSmartComponent},
   {path: 'course/:name/bibliography', component: BibliographyPageSmartComponent},
   {path: 'book/:title', component: BookPageSmartComponent},
