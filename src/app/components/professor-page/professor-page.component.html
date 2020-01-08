@@ -56,40 +56,91 @@
       <div class="modal-body">
 
         <div class="emojis">
-          <mdb-icon fas icon="angry" size="3x"  (click) ="selectIcon('angry')"></mdb-icon>
-          <mdb-icon fas icon="tired" size="3x" (click) ="selectIcon('tired' )"></mdb-icon>
-          <mdb-icon fas icon="grimace" size="3x"  (click) ="selectIcon('grimace')"></mdb-icon>
-          <mdb-icon fas icon="smile-beam" size="3x" (click) ="selectIcon('smile-beam')"></mdb-icon>
-          <mdb-icon fas icon="grin-hearts" size="3x" (click) ="selectIcon('grin-hearts')"></mdb-icon>
+          <mdb-icon fas icon="angry" [size]= "selectedIcon == 'angry' ? '5x' : '3x'"  id="angry" (click) ="selectIcon('angry')"></mdb-icon>
+          <mdb-icon fas icon="tired" [size]= "selectedIcon == 'angry' ? '5x' : '3x'" id="tired" (click) ="selectIcon('tired' )"></mdb-icon>
+          <mdb-icon fas icon="grimace" [size]= "selectedIcon == 'angry' ? '5x' : '3x'" id="grimace"  (click) ="selectIcon('grimace')"></mdb-icon>
+          <mdb-icon fas icon="smile-beam" [size]= "selectedIcon == 'angry' ? '5x' : '3x'" id="smile-beam" (click) ="selectIcon('smile-beam')"></mdb-icon>
+          <mdb-icon fas icon="grin-hearts" [size]= "selectedIcon == 'angry' ? '5x' : '3x'" id="grin-hearts" (click) ="selectIcon('grin-hearts')"></mdb-icon>
         </div>
 
         <div class="questions" >
           <p></p>
-          <p>Course attendance: </p>
-          <mdb-checkbox [default]="true">0%-20% </mdb-checkbox>
-          <mdb-checkbox [default]="true">20%-40% </mdb-checkbox>
-          <mdb-checkbox [default]="true">40%-60% </mdb-checkbox>
-          <mdb-checkbox [default]="true">60%-80% </mdb-checkbox>
-          <mdb-checkbox [default]="true">80%-100% </mdb-checkbox>
+          <div class="modal-body">
+            <p>Course attendance:</p>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked1" name="defaultExampleRadios" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked1">0%-20%</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked2" name="defaultExampleRadios" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked2">20%-40% </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked3" name="defaultExampleRadios" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked3">40%-60%</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked4" name="defaultExampleRadios" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked4">60%-80% </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked5" name="defaultExampleRadios" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked5">80%-100% </label>
+            </div>
+            </div>
+            <div class="modal-body">
+              <p>Laboratory attendance:</p>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked11" name="defaultExampleRadios1" mdbInput>
+                <label class="custom-control-label" for="defaultUnchecked11">0%-20%</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked12" name="defaultExampleRadios1" mdbInput>
+                <label class="custom-control-label" for="defaultUnchecked12">20%-40% </label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked13" name="defaultExampleRadios1" mdbInput>
+                <label class="custom-control-label" for="defaultUnchecked13">40%-60%</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked14" name="defaultExampleRadios1" mdbInput>
+                <label class="custom-control-label" for="defaultUnchecked14">60%-80% </label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked15" name="defaultExampleRadios1" mdbInput>
+                <label class="custom-control-label" for="defaultUnchecked15">80%-100% </label>
+              </div>
+          </div>
           <p></p>
-          <p>Laboratory attendance: </p>
-          <mdb-checkbox [default]="true">0%-20% </mdb-checkbox>
-          <mdb-checkbox [default]="true">20%-40% </mdb-checkbox>
-          <mdb-checkbox [default]="true">40%-60% </mdb-checkbox>
-          <mdb-checkbox [default]="true">60%-80% </mdb-checkbox>
-          <mdb-checkbox [default]="true">80%-100% </mdb-checkbox>
-          <p></p>
-          <p>Quality of the support materials: </p>
-          <mdb-checkbox [default]="true">0%-20%</mdb-checkbox>
-          <mdb-checkbox [default]="true">20%-40%</mdb-checkbox>
-          <mdb-checkbox [default]="true">40%-60%</mdb-checkbox>
-          <mdb-checkbox [default]="true">60%-80%</mdb-checkbox>
-          <mdb-checkbox [default]="true">80%-100%</mdb-checkbox>
+
+          <div class="modal-body">
+            <p>How you appreciate the quality of the support materials:</p>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked21" name="defaultExampleRadios2" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked21">0%-20%</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked22" name="defaultExampleRadios2" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked22">20%-40% </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked23" name="defaultExampleRadios2" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked23">40%-60%</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked24" name="defaultExampleRadios2" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked24">60%-80% </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked25" name="defaultExampleRadios2" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked25">80%-100% </label>
+            </div>
+          </div>
           <p></p>
         </div>
         <div class="input-div">
           <p>Your opinion: </p>
-          <input class="input-text" type="text"  placeholder="insert text here ...">
+          <textarea rows="4" cols="50" placeholder="Hi! I belive that ..."></textarea>
         </div>
 
       </div>

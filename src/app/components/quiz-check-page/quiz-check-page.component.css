@@ -27,3 +27,7 @@ section > div > button {
   font-weight: bold;
 
 }
+/* nu se pune :( */
+.emojis {
+  color: yellow !important;
+}
