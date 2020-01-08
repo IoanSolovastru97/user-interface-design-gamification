@@ -18,20 +18,20 @@
           <mdb-card-img [src]="course.isLocked ? 'assets/img/enroll/locked.png'
           : !course.isCompleted ? 'assets/img/enroll/unlocked.png'
           : 'assets/img/enroll/completed.png' " class="isLocked"
-                        ng-mouseleave="hidePopover()" ng-mouseover="showPopover()"></mdb-card-img>
+                        on-mouseleave="hidePopover(course)" on-mouseover="showPopover(course)"></mdb-card-img>
 
-<!--          <div class="popover" ng-show="popoverIsVisible && course.isLocked ">Complete ECG course first!</div>-->
-<!--          <div class="popover" ng-show="popoverIsVisible && !course.isLocked && !course.isCompleted">Select this course!</div>-->
-<!--          <div class="popover" ng-show="popoverIsVisible && course.isCompleted">You've already completed this course!</div>-->
+          <div class="popover" [style.visibility]="course.popoverIsVisible && course.isLocked ? 'visible' : 'hidden' ">Complete ECG course first!</div>
+          <div class="popover" [style.visibility]="course.popoverIsVisible && !course.isLocked && !course.isCompleted ? 'visible' : 'hidden' ">Select this course!</div>
+          <div class="popover" [style.visibility]="course.popoverIsVisible && !course.isLocked && course.isCompleted ? 'visible' : 'hidden' ">You've already completed this course!</div>
           <mdb-card-body>
 
             <mdb-card-title>
-              <h4>{{course.name}}</h4>
+              <h4>   {{course.name}}</h4>
             </mdb-card-title>
 
             <mdb-card-text>
-              <b>{{course.mainTeacher}}</b>
-              <p>{{course.secondTeacher}}  -  {{course.thirdTeacher}}</p>
+              <b>  {{course.mainTeacher}}</b>
+              <p>  {{course.secondTeacher}}  -  {{course.thirdTeacher}}</p>
             </mdb-card-text>
 
 <!--            <div class="progress" style="height:10px">-->
@@ -39,7 +39,7 @@
 <!--            </div>-->
 
             <div class="go_to_course_page_button">
-              <button mdbBtn color="blue" mdbWavesEffect (click)="sendCourse(course)">Go to course page</button>
+              <button mdbBtn color="blue" [disabled]="true" mdbWavesEffect (click)="sendCourse(course)">Go to course page</button>
             </div>
 
           </mdb-card-body>

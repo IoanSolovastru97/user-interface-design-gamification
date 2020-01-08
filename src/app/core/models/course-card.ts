@@ -8,4 +8,5 @@ export class CourseCard {
   numberOfCredits: number;
   isLocked: boolean;
   isCompleted: boolean;
+  popoverIsVisible: boolean;
 }

@@ -16,7 +16,8 @@ export class CoursesService {
       thirdTeacher: "Crinela Potinteu",
       numberOfCredits: 5,
       isLocked: true,
-      isCompleted: false
+      isCompleted: false,
+      popoverIsVisible: false
     },
     {
       name: "Artificial Intelligence",
@@ -27,7 +28,9 @@ export class CoursesService {
       thirdTeacher: "Adrian Groza",
       numberOfCredits: 5,
       isLocked: false,
-      isCompleted: false
+      isCompleted: false,
+      popoverIsVisible: false
+
     },
     {
       name: "Fundamental Algorithms",
@@ -38,7 +41,9 @@ export class CoursesService {
       thirdTeacher: "Vlad Buzea",
       numberOfCredits: 5,
       isLocked: false,
-      isCompleted: true
+      isCompleted: true,
+      popoverIsVisible: false
+
     },
   ];
 
@@ -52,7 +57,9 @@ export class CoursesService {
       thirdTeacher: "Crinela Potinteu",
       numberOfCredits: 5,
       isLocked: true,
-      isCompleted: false
+      isCompleted: false,
+      popoverIsVisible: false
+
     },
     {
       name: "Artificial Intelligence",
@@ -63,7 +70,9 @@ export class CoursesService {
       thirdTeacher: "Adrian Groza",
       numberOfCredits: 5,
       isLocked: false,
-      isCompleted: false
+      isCompleted: false,
+      popoverIsVisible: false
+
     },
     {
       name: "Fundamental Algorithms",
@@ -74,7 +83,8 @@ export class CoursesService {
       thirdTeacher: "Vlad Buzea",
       numberOfCredits: 5,
       isLocked: false,
-      isCompleted: true
+      isCompleted: true,
+      popoverIsVisible: false
     },
     {
       name: "Elements of Computer Assisted Graphics",
@@ -85,7 +95,8 @@ export class CoursesService {
       thirdTeacher: "Crinela Potinteu",
       numberOfCredits: 5,
       isLocked: false,
-      isCompleted: false
+      isCompleted: false,
+      popoverIsVisible: false
     },
     {
       name: "Functional Programming",
@@ -96,7 +107,8 @@ export class CoursesService {
       thirdTeacher: "Adrian Groza",
       numberOfCredits: 5,
       isLocked: false,
-      isCompleted: false
+      isCompleted: false,
+      popoverIsVisible: false
     },
     {
       name: "Logical Programming",
@@ -107,7 +119,8 @@ export class CoursesService {
       thirdTeacher: "Vlad Buzea",
       numberOfCredits: 5,
       isLocked: false,
-      isCompleted: false
+      isCompleted: false,
+      popoverIsVisible: false
     },
   ];
 

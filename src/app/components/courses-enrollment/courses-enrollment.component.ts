@@ -30,6 +30,7 @@ export class CoursesEnrollmentComponent implements OnInit {
     console.log(course);
   }
 
+
   enroll() {
     if (this.chosenCredits === this.creditsToFullFill) {
        this.router.navigateByUrl('courses');
@@ -48,11 +49,13 @@ export class CoursesEnrollmentComponent implements OnInit {
     }
   }
 
-  showPopover() {
-      this.popoverIsVisible = true;
+  showPopover(course) {
+    console.log('showPopover');
+    course.popoverIsVisible = true;
   }
 
-  hidePopover() {
-    this.popoverIsVisible = false;
+  hidePopover(course) {
+    console.log('hidePopover');
+    course.popoverIsVisible = false;
   }
 }
