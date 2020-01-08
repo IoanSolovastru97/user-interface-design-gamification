@@ -50,7 +50,7 @@ export class TeamService {
   constructor() {
   }
 
-  getAllCourses(): Team[] {
+  getAllTeams(): Team[] {
     return this.teams;
   }
 }

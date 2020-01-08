@@ -86,6 +86,8 @@ import { CoursesEnrollmentComponent } from './components/courses-enrollment/cour
 import { CoursesEnrollmentSmartComponent } from './containers/courses-enrollment-smart/courses-enrollment-smart.component';
 import { ProfessorPageComponent } from './components/professor-page/professor-page.component';
 import { ProfessorPageSmartComponent } from './containers/professor-page-smart/professor-page-smart.component';
+import { TeamSupportComponent } from './components/team-support/team-support.component';
+import { TeamSupportSmartComponent } from './containers/team-support-smart/team-support-smart.component';
 
 @NgModule({
   declarations: [
@@ -130,7 +132,9 @@ import { ProfessorPageSmartComponent } from './containers/professor-page-smart/p
     CoursesEnrollmentComponent,
     CoursesEnrollmentSmartComponent,
     ProfessorPageComponent,
-    ProfessorPageSmartComponent
+    ProfessorPageSmartComponent,
+    TeamSupportComponent,
+    TeamSupportSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
