@@ -21,6 +21,7 @@ import {LivestreamOnlineSmartComponent} from './containers/livestream-smart/live
 import {DebateTimeSmartComponent} from './containers/livestream-smart/livestream-online-smart/debate-time-smart/debate-time-smart.component';
 import {MiniGameSmartComponent} from './containers/livestream-smart/livestream-online-smart/mini-game-smart/mini-game-smart.component';
 import {AuthGuard} from './auth.guard';
+import { NotificationPageSmartComponent } from './containers/notification-page-smart/notification-page-smart.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: 'book/:title', component: BookPageSmartComponent},
   {path: 'course/:name/quiz', component: QuizPageSmartComponent},
   {path: 'quiz-check', component: QuizCheckPageSmartComponent},
+  {path: 'home/notification', component: NotificationPageSmartComponent},
   {path: 'skills/hard', component: SkillsPageSmartComponent},
   {path: 'room-reservation', component: RoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
   {path: 'room-reservation/create', component: CreateRoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},

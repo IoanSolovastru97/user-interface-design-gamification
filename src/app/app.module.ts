@@ -17,6 +17,7 @@ import {
   MatInputModule,
   MatListModule,
   MatMenuModule,
+  MatSliderModule,
   MatNativeDateModule,
   MatProgressSpinnerModule,
   MatSelectModule,
@@ -28,12 +29,12 @@ import {
   MatToolbarModule,
   MatTreeModule,
 } from '@angular/material';
-import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { HomePageSmartComponent } from './containers/home-page-smart/home-page-smart.component';
@@ -47,11 +48,11 @@ import { BibliographyPageSmartComponent } from './containers/bibliography-page-s
 import { BookPageComponent } from './components/book-page/book-page.component';
 import { BookPageSmartComponent } from './containers/book-page-smart/book-page-smart.component';
 import { RoomReservationSmartComponent } from './containers/room-reservation-smart/room-reservation-smart.component';
-import {CalendarCommonModule, CalendarModule, CalendarWeekModule, DateAdapter} from 'angular-calendar';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {adapterFactory} from 'angular-calendar/date-adapters/date-fns';
-import {CommonModule} from '@angular/common';
-import {NgbModalModule, NgbTimepickerModule} from '@ng-bootstrap/ng-bootstrap';
+import { CalendarCommonModule, CalendarModule, CalendarWeekModule, DateAdapter } from 'angular-calendar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { CommonModule } from '@angular/common';
+import { NgbModalModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
 // tslint:disable-next-line:max-line-length
 import { CreateRoomReservationSmartComponent } from './containers/room-reservation-smart/create-room-reservation-smart/create-room-reservation-smart.component';
 // tslint:disable-next-line:max-line-length
@@ -68,7 +69,7 @@ import { MiniGamePageComponent } from './components/livestream-page/livestream-o
 // tslint:disable-next-line:max-line-length
 import { DebateTimeSmartComponent } from './containers/livestream-smart/livestream-online-smart/debate-time-smart/debate-time-smart.component';
 import { MiniGameSmartComponent } from './containers/livestream-smart/livestream-online-smart/mini-game-smart/mini-game-smart.component';
-import {InlineSVGModule} from 'ng-inline-svg';
+import { InlineSVGModule } from 'ng-inline-svg';
 
 
 import { ChatPageComponent } from './components/chat-page/chat-page.component';
@@ -78,10 +79,14 @@ import { AudioRecordPopupComponent } from './components/chat-page/audio-record-p
 import { PollPopupComponent } from './components/chat-page/poll-popup/poll-popup.component';
 import { SkillsPageComponent } from './components/skills-page/skills-page.component';
 import { SkillsPageSmartComponent } from './containers/skills-page-smart/skills-page-smart.component';
-import {QuizPageComponent} from './components/quiz-page/quiz-page.component';
-import {QuizPageSmartComponent} from './containers/quiz-page-smart/quiz-page-smart.component';
-import {QuizCheckPageComponent} from './components/quiz-check-page/quiz-check-page.component';
-import {QuizCheckPageSmartComponent} from './containers/quiz-check-page-smart/quiz-check-page-smart.component';
+import { QuizPageComponent } from './components/quiz-page/quiz-page.component';
+import { QuizPageSmartComponent } from './containers/quiz-page-smart/quiz-page-smart.component';
+import { QuizCheckPageComponent } from './components/quiz-check-page/quiz-check-page.component';
+import { QuizCheckPageSmartComponent } from './containers/quiz-check-page-smart/quiz-check-page-smart.component';
+import { NotificationPageComponent } from './components/notification-page/notification-page.component';
+import { NotificationPageSmartComponent } from './containers/notification-page-smart/notification-page-smart.component';
+import { ToastrModule } from 'ngx-toastr';
+import { QuestionsAndAnswersPageComponent } from './components/questions-and-answers-page/questions-and-answers-page.component';
 
 @NgModule({
   declarations: [
@@ -122,7 +127,10 @@ import {QuizCheckPageSmartComponent} from './containers/quiz-check-page-smart/qu
     QuizCheckPageComponent,
     QuizCheckPageSmartComponent,
     SkillsPageComponent,
-    SkillsPageSmartComponent
+    SkillsPageSmartComponent,
+    NotificationPageComponent,
+    NotificationPageSmartComponent,
+    QuestionsAndAnswersPageComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
@@ -130,10 +138,11 @@ import {QuizCheckPageSmartComponent} from './containers/quiz-check-page-smart/qu
     BrowserModule,
     ReactiveFormsModule,
     CommonModule,
+    ToastrModule.forRoot(),
     NgbModalModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule, MatFormFieldModule, MatCardModule, MatTableModule, MatButtonModule, MatCheckboxModule,
+    MatInputModule, MatFormFieldModule, MatCardModule, MatTableModule, MatButtonModule, MatCheckboxModule, MatSliderModule,
     MatDividerModule, MatIconModule, MatGridListModule, MatListModule, MatSidenavModule, MatDialogModule,
     MatToolbarModule, MatDatepickerModule, MatSelectModule, FormsModule,
     MatNativeDateModule, MatExpansionModule, MatStepperModule, MatChipsModule, MatBadgeModule,
