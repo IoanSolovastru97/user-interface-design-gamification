@@ -1,0 +1,23 @@
+section{
+    /* display:flex; */
+    /* justify-content:space-between; */
+    margin-left: 43%;
+    margin-right: 5%;
+  }
+  
+  
+  h2{
+    margin-left: 43%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    color: gray;
+  }
+
+  form{
+      margin-top: 5%;
+  }
+
+  div{
+    margin-right: 30%;
+  }

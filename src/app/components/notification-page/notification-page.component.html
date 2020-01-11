@@ -1,0 +1,51 @@
+<h2> Add Notification </h2>
+
+<section>
+    <!-- Title -->
+    <form>
+        <h3>Title</h3>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Title">
+        </mat-form-field>
+    </form>
+
+    <form>
+        <h3>Select Date</h3>
+        <table class="example-full-width" cellPadding="5">
+            <tr>
+                <td>
+                    <mat-form-field>
+                        <mat-label>Select Hour</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let hour of hours" [value]="hour.value">
+                                {{hour.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <form>
+        <h3>Priority</h3>
+        <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="5" min="1" max="5"></mat-slider>
+    </form>
+    <form>
+        <h3>Description</h3>
+        <div class="md-form">
+            <mdb-icon fas icon="pencil-alt" class="prefix"></mdb-icon>
+            <textarea type="text" id="form8" class="md-textarea form-control" mdbInput></textarea>
+            <label for="form8">Description</label>
+        </div>
+    </form>
+    <a mdbBtn color="success" class="waves-light" (click)="showSuccess()" mdbWavesEffect>Submit</a>
+
+</section>
