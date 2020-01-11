@@ -21,3 +21,16 @@
   display: flex;
   justify-content: center;
 }
+
+.initClass {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.initButton {
+  position : relative;
+  top:25%;
+  margin-top : 20px;
+}

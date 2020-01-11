@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {CourseCard} from '../../core/models/course-card';
 import {CoursesService} from '../../core/services/courses.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-courses-page',
@@ -13,7 +14,7 @@ export class CoursesPageComponent implements OnInit {
 
   @Output() viewCourse: EventEmitter<CourseCard> = new EventEmitter<CourseCard>();
 
-  constructor(private coursesService: CoursesService) {
+  constructor(private coursesService: CoursesService, private router: Router) {
   }
 
   ngOnInit() {
@@ -23,5 +24,9 @@ export class CoursesPageComponent implements OnInit {
   sendCourse(course: CourseCard) {
     this.viewCourse.emit(course);
     console.log(course);
+  }
+
+  initCourses() {
+    this.router.navigateByUrl('enroll');
   }
 }

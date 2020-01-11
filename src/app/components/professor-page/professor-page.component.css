@@ -1,0 +1,55 @@
+h4 {
+  align-self: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.prof-img {
+  height: 55%;
+  width: 70%;
+  align-self: center;
+}
+
+.info-img {
+  height: 40%;
+  width: 70%;
+  align-self: center;
+}
+
+section {
+  display:flex;
+  align-items: stretch;
+}
+
+.professionalInfo {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.selected-icon {
+  color: mediumvioletred;
+  align-self: center;
+  padding: 10px;
+
+}
+
+.emojis {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-body{
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.modal-body {
+  height: available;
+}
+
+.input-text {
+  width:100%;
+  height: 70%;
+  padding: 5px;
+}

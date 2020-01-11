@@ -1,0 +1,158 @@
+<h4> Professor's Page </h4>
+
+<section>
+
+  <div class ="professionalInfo">
+<!--    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar-m" border="0">-->
+    <img class ="prof-img" src="assets/img/avatars/prof.png" alt="avatar-m" border="0">
+
+    <mdb-icon class = "selected-icon" far [icon] =  this.displayedIcon  size="3x" (click)="frame.show()"></mdb-icon>
+
+    <img class = "info-img" src="assets/img/professor/prof-info.PNG" alt="prof-info" border="0">
+
+  </div>
+
+  <mat-tab-group>
+    <mat-tab label="General info">
+      <p> </p>
+      <p>
+        Technical University of Cluj-Napoca
+      </p>
+      <p>
+        Faculty of Computer Science
+      </p>
+    </mat-tab>
+    <mat-tab label="Research">
+      <p> </p>
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </mat-tab>
+    <mat-tab label="CV">
+      <p> </p>
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+</section>
+
+<div mdbModal #frame="mdbModal" class="modal fade top " id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Evaluate your teacher</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+
+        <div class="emojis">
+          <mdb-icon fas icon="angry" [size]= "selectedIcon == 'angry' ? '5x' : '3x'"  id="angry" (click) ="selectIcon('angry')"></mdb-icon>
+          <mdb-icon fas icon="tired" [size]= "selectedIcon == 'angry' ? '5x' : '3x'" id="tired" (click) ="selectIcon('tired' )"></mdb-icon>
+          <mdb-icon fas icon="grimace" [size]= "selectedIcon == 'angry' ? '5x' : '3x'" id="grimace"  (click) ="selectIcon('grimace')"></mdb-icon>
+          <mdb-icon fas icon="smile-beam" [size]= "selectedIcon == 'angry' ? '5x' : '3x'" id="smile-beam" (click) ="selectIcon('smile-beam')"></mdb-icon>
+          <mdb-icon fas icon="grin-hearts" [size]= "selectedIcon == 'angry' ? '5x' : '3x'" id="grin-hearts" (click) ="selectIcon('grin-hearts')"></mdb-icon>
+        </div>
+
+        <div class="questions" >
+          <p></p>
+          <div class="modal-body">
+            <p>Course attendance:</p>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked1" name="defaultExampleRadios" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked1">0%-20%</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked2" name="defaultExampleRadios" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked2">20%-40% </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked3" name="defaultExampleRadios" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked3">40%-60%</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked4" name="defaultExampleRadios" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked4">60%-80% </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked5" name="defaultExampleRadios" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked5">80%-100% </label>
+            </div>
+            </div>
+            <div class="modal-body">
+              <p>Laboratory attendance:</p>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked11" name="defaultExampleRadios1" mdbInput>
+                <label class="custom-control-label" for="defaultUnchecked11">0%-20%</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked12" name="defaultExampleRadios1" mdbInput>
+                <label class="custom-control-label" for="defaultUnchecked12">20%-40% </label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked13" name="defaultExampleRadios1" mdbInput>
+                <label class="custom-control-label" for="defaultUnchecked13">40%-60%</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked14" name="defaultExampleRadios1" mdbInput>
+                <label class="custom-control-label" for="defaultUnchecked14">60%-80% </label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked15" name="defaultExampleRadios1" mdbInput>
+                <label class="custom-control-label" for="defaultUnchecked15">80%-100% </label>
+              </div>
+          </div>
+          <p></p>
+
+          <div class="modal-body">
+            <p>How you appreciate the quality of the support materials:</p>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked21" name="defaultExampleRadios2" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked21">0%-20%</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked22" name="defaultExampleRadios2" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked22">20%-40% </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked23" name="defaultExampleRadios2" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked23">40%-60%</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked24" name="defaultExampleRadios2" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked24">60%-80% </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked25" name="defaultExampleRadios2" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked25">80%-100% </label>
+            </div>
+          </div>
+          <p></p>
+        </div>
+        <div class="input-div">
+          <p>Your opinion: </p>
+          <textarea rows="4" cols="50" placeholder="Hi! I belive that ..."></textarea>
+        </div>
+
+      </div>
+
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" mdbBtn color="success" outline="true" class="waves-effect" mdbWavesEffect (click)="frame.hide(); submit()">Submit</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+

@@ -1,0 +1,56 @@
+<div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  <div class ="statusCredits">
+    <p> Total credits needed: {{ this.creditsToFullFill}}</p>
+    <p> Credits you selected : {{ this.chosenCredits}}</p>
+  </div>
+
+  <div class="courses_view">
+    <div class="card-columns" >
+
+      <div *ngFor="let course of courses">
+
+        <mdb-card (click) ="selectCourse(course)">
+
+          <mdb-card-img [src]="course.cover" alt="Card image cap" style="height: 200px"></mdb-card-img>
+
+          <mdb-card-img [src]="course.isLocked ? 'assets/img/enroll/locked.png'
+          : !course.isCompleted ? 'assets/img/enroll/unlocked.png'
+          : 'assets/img/enroll/completed.png' " class="isLocked"
+                        on-mouseleave="hidePopover(course)" on-mouseover="showPopover(course)"></mdb-card-img>
+
+          <div class="popover" [style.visibility]="course.popoverIsVisible && course.isLocked ? 'visible' : 'hidden' ">Complete ECG course first!</div>
+          <div class="popover" [style.visibility]="course.popoverIsVisible && !course.isLocked && !course.isCompleted ? 'visible' : 'hidden' ">Select this course!</div>
+          <div class="popover" [style.visibility]="course.popoverIsVisible && !course.isLocked && course.isCompleted ? 'visible' : 'hidden' ">You've already completed this course!</div>
+          <mdb-card-body>
+
+            <mdb-card-title>
+              <h4>   {{course.name}}</h4>
+            </mdb-card-title>
+
+            <mdb-card-text>
+              <b>  {{course.mainTeacher}}</b>
+              <p>  {{course.secondTeacher}}  -  {{course.thirdTeacher}}</p>
+            </mdb-card-text>
+
+<!--            <div class="progress" style="height:10px">-->
+<!--              <div class="progress-bar" style="width:35%"></div>-->
+<!--            </div>-->
+
+            <div class="go_to_course_page_button">
+              <button mdbBtn color="blue" [disabled]="true" mdbWavesEffect (click)="sendCourse(course)">Go to course page</button>
+            </div>
+
+          </mdb-card-body>
+
+        </mdb-card>
+      </div>
+    </div>
+  </div>
+
+  <div class = "enrollClasses">
+    <button class="enrollButton" mdbBtn color="blue" mdbWavesEffect (click)="enroll()"
+    [disabled] ="this.chosenCredits !== this.creditsToFullFill">Enroll </button>
+  </div>
+</div>

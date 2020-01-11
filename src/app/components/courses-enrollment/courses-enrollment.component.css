@@ -1,0 +1,78 @@
+.courses_view {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.card {
+  margin: 0 10px;
+  width: 350px;
+  height: 450px;
+}
+
+mdb-card-img {
+  height: 190px;
+}
+#a {
+  display: block;
+  margin: auto;
+}
+
+.go_to_course_page_button {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.initClass {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.initButton {
+  position : relative;
+  top:25%;
+  margin-top : 20px;
+}
+
+
+.isLocked{
+  position:absolute;
+  margin-top: -30px;
+  margin-left: 280px;
+  padding-right: 10%;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+}
+
+.statusCredits {
+  padding-top: 50px;
+  margin-left: 85%;
+}
+
+.enrollClasses {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.enrollButton {
+  position : relative;
+  top:25%;
+  margin-top : 20px;
+}
+
+.popover {
+  position: absolute;
+  padding: 10px;
+  margin-top: 140px;
+  margin-left: 80px;
+  background-color: #226fc8;
+  border: 1px solid grey;
+  border-radius: 10px;
+  z-index: 100;
+}
