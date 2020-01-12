@@ -87,14 +87,11 @@ import { NotificationPageComponent } from './components/notification-page/notifi
 import { NotificationPageSmartComponent } from './containers/notification-page-smart/notification-page-smart.component';
 import { ToastrModule } from 'ngx-toastr';
 import { QuestionsAndAnswersPageComponent } from './components/questions-and-answers-page/questions-and-answers-page.component';
-import {QuizPageComponent} from './components/quiz-page/quiz-page.component';
-import {QuizPageSmartComponent} from './containers/quiz-page-smart/quiz-page-smart.component';
-import {QuizCheckPageComponent} from './components/quiz-check-page/quiz-check-page.component';
-import {QuizCheckPageSmartComponent} from './containers/quiz-check-page-smart/quiz-check-page-smart.component';
 import { CoursesEnrollmentComponent } from './components/courses-enrollment/courses-enrollment.component';
 import { CoursesEnrollmentSmartComponent } from './containers/courses-enrollment-smart/courses-enrollment-smart.component';
 import { ProfessorPageComponent } from './components/professor-page/professor-page.component';
 import { ProfessorPageSmartComponent } from './containers/professor-page-smart/professor-page-smart.component';
+import { QuestionsAndAnswersPageSmartComponent } from './containers/questions-and-answers-page-smart/questions-and-answers-page-smart.component';
 
 @NgModule({
   declarations: [
@@ -138,16 +135,18 @@ import { ProfessorPageSmartComponent } from './containers/professor-page-smart/p
     SkillsPageSmartComponent,
     NotificationPageComponent,
     NotificationPageSmartComponent,
-    QuestionsAndAnswersPageComponent
     CoursesEnrollmentComponent,
     CoursesEnrollmentSmartComponent,
     ProfessorPageComponent,
-    ProfessorPageSmartComponent
+    ProfessorPageSmartComponent,
+    QuestionsAndAnswersPageComponent,
+    QuestionsAndAnswersPageSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
     BrowserModule,
+    FormsModule,
     ReactiveFormsModule,
     CommonModule,
     ToastrModule.forRoot(),

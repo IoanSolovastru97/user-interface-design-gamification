@@ -25,6 +25,7 @@ import {AuthGuard} from './auth.guard';
 import { NotificationPageSmartComponent } from './containers/notification-page-smart/notification-page-smart.component';
 
 import {ProfessorPageSmartComponent} from './containers/professor-page-smart/professor-page-smart.component';
+import { QuestionsAndAnswersPageSmartComponent } from './containers/questions-and-answers-page-smart/questions-and-answers-page-smart.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -39,6 +40,7 @@ const routes: Routes = [
   {path: 'course/:name/bibliography', component: BibliographyPageSmartComponent},
   {path: 'book/:title', component: BookPageSmartComponent},
   {path: 'course/:name/quiz', component: QuizPageSmartComponent},
+  {path: 'course/:name/qanda', component: QuestionsAndAnswersPageSmartComponent},
   {path: 'quiz-check', component: QuizCheckPageSmartComponent},
   {path: 'home/notification', component: NotificationPageSmartComponent},
   {path: 'skills/hard', component: SkillsPageSmartComponent},
