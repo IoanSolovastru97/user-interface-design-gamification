@@ -1,8 +1,10 @@
+import {Student} from './student';
+
 export class Team {
   name: string;
   image: string;
   description: string;
-  persons: [];
+  persons: Student[];
   numberOfPersons: number;
   innovation: number;
   teamwork: number;

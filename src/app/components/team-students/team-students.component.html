@@ -1,18 +1,26 @@
-<table mdbTable>
-  <thead>
-  <tr>
-    <th *ngFor="let head of headElements" scope="col">{{head}} </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr mdbTableCol *ngFor="let el of students">
-    <th scope="row">{{el.id}}</th>
-    <td>{{el.name}}</td>
-    <td>{{el.innovation}}</td>
-    <td>{{el.teamwork}}</td>
-    <td>{{el.organization}}</td>
-    <td>{{el.communication}}</td>
+<div>
+  <table mdbTable>
+    <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr mdbTableCol *ngFor="let el of students">
+      <mat-checkbox [disabled]="this.studentiClickuiti.length >= 3" (change) ="this.selectedStudentsCount < 3 ? studentSelected(el): null ">
+      </mat-checkbox>
+      <th scope="row">{{el.id}}</th>
+      <td>{{el.name}}</td>
+      <td>{{el.innovation}}</td>
+      <td>{{el.teamwork}}</td>
+      <td>{{el.organization}}</td>
+      <td>{{el.communication}}</td>
+    </tr>
+    </tbody>
+  </table>
 
-  </tr>
-  </tbody>
-</table>
+  <div class="buttons">
+  <button mat-raised-button color="primary" [disabled]="this.selectedStudentsCount <3">Complete Team</button>
+  <button mat-raised-button color="red" (click)="clear()">Clear List </button>
+  </div>
+</div>

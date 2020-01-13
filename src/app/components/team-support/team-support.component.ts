@@ -17,10 +17,12 @@ export class TeamSupportComponent implements OnInit {
 
   ngOnInit() {
     this.teams = this.teamService.getAllTeams();
+    console.log(this.teams);
 
   }
 
   newTeam(team) {
       this.router.navigateByUrl('teamStudents');
   }
+
 }

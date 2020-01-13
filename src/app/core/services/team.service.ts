@@ -13,7 +13,7 @@ export class TeamService {
       description: 'Design a small advanced 3D grade A worthy game (Or a prototype). \n' +
         'Cover such topics as Concept design, Graphics, Shaders, Art, Level design, Animation, AI, PhysX, Core systems, ',
       persons: [],
-      numberOfPersons: 3,
+      numberOfPersons: 5,
       innovation: 0,
       teamwork: 0,
       organization: 0,
@@ -37,7 +37,46 @@ export class TeamService {
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsDtMM9zYzR56XkMIgUR7jtVKWQLARKJSdhdDpFtO5_I1Hprd5FQ&s',
       // tslint:disable-next-line:max-line-length
       description: 'This project aims to stimulate the participation of students to the educational process and to propose solutions for an increased awareness on their part.',
-      persons: [],
+      persons: [ {
+        id: 1,
+        name: 'Gui Andreea',
+        innovation: 90,
+        teamwork: 80,
+        organization: 57,
+        communication: 67
+      },
+    {
+      id: 2,
+      name: 'Sirca Narcisa',
+      innovation: 85,
+      teamwork: 20,
+      organization: 40,
+      communication: 90
+    },
+    {
+      id: 3,
+      name: 'Moldovan Flaviu',
+      innovation: 90,
+      teamwork: 80,
+      organization: 70,
+      communication: 44
+    },
+    {
+      id: 4,
+      name: 'Onofrei Ioana',
+      innovation: 70,
+      teamwork: 90,
+      organization: 88,
+      communication: 67
+    },
+    {
+      id: 5,
+      name: 'Solovastru Ioan',
+      innovation: 82,
+      teamwork: 67,
+      organization: 34,
+      communication: 67
+    }] ,
       numberOfPersons: 3,
       innovation: 0,
       teamwork: 0,
