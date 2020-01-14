@@ -23,7 +23,7 @@ export class AuthService {
   }
 
   get user() {
-    return this.authUser;
+    return this.authUser || JSON.parse(localStorage.getItem('user'));
   }
 
   onLogin(username: string, password: string) {
@@ -38,6 +38,7 @@ export class AuthService {
   }
 
   logout() {
+    localStorage.removeItem('user');
     this.user = null;
   }
 
