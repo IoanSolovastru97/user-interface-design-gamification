@@ -4,8 +4,8 @@ section{
     margin-left: 43%;
     margin-right: 5%;
   }
-  
-  
+
+
   h2{
     margin-left: 43%;
     margin-top: 2%;
@@ -20,4 +20,8 @@ section{
 
   div{
     margin-right: 30%;
+  }
+
+  h3 {
+    color: black;
   }
