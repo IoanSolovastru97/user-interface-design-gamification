@@ -11,12 +11,19 @@ import {Student} from '../../core/models/student';
 })
 export class TeamStudentsComponent implements OnInit {
 
-  headElements = ['Id', 'Name', 'Innovation', 'Teamwork', 'Organization', 'Communication'];
+  headElements = ['Sel', 'Id', 'Name', 'Innovation', 'Teamwork', 'Organization', 'Communication'];
   students = [];
 
-  selectedStudentsCount  = 0;
+  selectedStudentsCount  = 0; /// nu cred ca il mai folosesc de fapt
 
-  studentiClickuiti: Student[] = [];
+  studentiClickuiti: Student[] = [    {
+    id: 2,
+    name: 'Sirca Narcisa',
+    innovation: 85,
+    teamwork: 20,
+    organization: 40,
+    communication: 90
+  }];
 
   disable = false;
   constructor(private studentsService: StudentsService, private router: Router) { }
@@ -43,7 +50,25 @@ export class TeamStudentsComponent implements OnInit {
 
 clear() {
     console.log('clear');
-    // window.location.reload();
-    this.disable = true;
+    this.studentiClickuiti = [    {
+      id: 2,
+      name: 'Sirca Narcisa',
+      innovation: 85,
+      teamwork: 20,
+      organization: 40,
+      communication: 90
+    }];
+  }
+
+  completeTeam() {
+    this.studentiClickuiti = [    {
+      id: 2,
+      name: 'Sirca Narcisa',
+      innovation: 85,
+      teamwork: 20,
+      organization: 40,
+      communication: 90
+    }];
+    this.router.navigateByUrl('teamsupport');
   }
 }

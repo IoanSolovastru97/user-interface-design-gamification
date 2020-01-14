@@ -25,4 +25,7 @@ export class TeamSupportComponent implements OnInit {
       this.router.navigateByUrl('teamStudents');
   }
 
+  seeCharts() {
+    this.router.navigateByUrl('teamCharts');
+  }
 }

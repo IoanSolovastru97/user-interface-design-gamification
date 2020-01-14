@@ -1,4 +1,4 @@
-<div>
+<div class="wholePage">
   <table mdbTable>
     <thead>
     <tr>
@@ -7,7 +7,7 @@
     </thead>
     <tbody>
     <tr mdbTableCol *ngFor="let el of students">
-      <mat-checkbox [disabled]="this.studentiClickuiti.length >= 3" (change) ="this.selectedStudentsCount < 3 ? studentSelected(el): null ">
+      <mat-checkbox [disabled]="this.studentiClickuiti.length >= 3" [checked]="this.studentiClickuiti.includes(el)" (change) ="this.studentiClickuiti.length < 3 ? studentSelected(el): null ">
       </mat-checkbox>
       <th scope="row">{{el.id}}</th>
       <td>{{el.name}}</td>
@@ -18,9 +18,33 @@
     </tr>
     </tbody>
   </table>
-
+  <div class="displayInfo">
+    <br><br>
+  <div class="afisaj">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Students:  {{ this.studentiClickuiti.length}} / 3</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+  </div>
+  <br><br>
+  <div class="afisaj">
+  <mat-card class="example-card listaStudenti">
+    <mat-card-header >
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Current members:</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngFor="let s of studentiClickuiti">
+        <p> {{s.name}}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  </div>
+    <br><br><br>
   <div class="buttons">
-  <button mat-raised-button color="primary" [disabled]="this.selectedStudentsCount <3">Complete Team</button>
+  <button mat-raised-button color="primary" [disabled]="this.studentiClickuiti.length <3" (click)="completeTeam()">Complete Team</button>
   <button mat-raised-button color="red" (click)="clear()">Clear List </button>
+  </div>
   </div>
 </div>

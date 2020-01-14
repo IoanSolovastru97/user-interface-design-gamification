@@ -17,9 +17,12 @@
           </mdb-card-text>
 
           <div class="go_to_course_page_button">
-            <button mdbBtn color="blue" mdbWavesEffect (click)="newTeam(team)">Select your team!</button>
+            <button mdbBtn color="blue" [disabled] ="team.persons.length > 0" mdbWavesEffect (click)="newTeam(team)">Select your team!</button>
           </div>
 
+          <div class="go_to_course_page_button">
+            <button mdbBtn color="blue" [disabled] ="team.persons.length === 0" mdbWavesEffect (click)="seeCharts()">See your team !</button>
+          </div>
         </mdb-card-body>
 
       </mdb-card>

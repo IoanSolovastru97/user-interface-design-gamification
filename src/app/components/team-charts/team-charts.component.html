@@ -1,0 +1,86 @@
+
+<div class="titlu">
+  Team  members skills
+</div>
+
+<section>
+  <div class = "chartStudent">
+    <br>
+    <div class="numeStudent" >Andreea Gui</div>
+      <canvas mdbChart
+              [chartType]="this.chartType"
+              [datasets]="this.chartDatasets1"
+              [labels]="this.chartLabels"
+              [colors]="this.chartColors"
+              [legend]="true">
+      </canvas>
+    </div>
+
+    <div class = "chartStudent">
+      <br>
+      <div class="numeStudent" >Sirca Narcisa</div>
+      <canvas mdbChart
+              [chartType]="this.chartType"
+              [datasets]="this.chartDatasets2"
+              [labels]="this.chartLabels"
+              [colors]="this.chartColors"
+              [legend]="true"
+              [title]="true">
+      </canvas>
+    </div>
+
+    <div class = "chartStudent">
+      <br>
+      <div class="numeStudent" >Moldovan Flavius</div>
+      <canvas mdbChart
+              [chartType]="this.chartType"
+              [datasets]="this.chartDatasets3"
+              [labels]="this.chartLabels"
+              [colors]="this.chartColors"
+              [legend]="true">
+      </canvas>
+    </div>
+</section>
+<section>
+    <div class = "chartStudent">
+      <br>
+      <div class="numeStudent" >Onofrei Ioana</div>
+      <canvas mdbChart
+              [chartType]="this.chartType"
+              [datasets]="this.chartDatasets4"
+              [labels]="this.chartLabels"
+              [colors]="this.chartColors"
+              [legend]="true">
+      </canvas>
+    </div>
+
+    <div class = "chartStudent">
+      <br>
+     <div class="numeStudent" >Solovastru Ioan</div>
+      <canvas mdbChart
+              [chartType]="this.chartType"
+              [datasets]="this.chartDatasets5"
+              [labels]="this.chartLabels"
+              [colors]="this.chartColors"
+              [legend]="true">
+      </canvas>
+    </div>
+</section>
+<br><br>
+<div class="titlu">
+  Team  composition skills
+</div>
+<br><br>
+
+
+  <div id="team"><br>
+    <div class="numeStudent" >Team Composition</div><br>
+    <canvas mdbChart id="teamChart" class="teamChar"
+            [chartType]="chartType"
+            [datasets]="chartFinal"
+            [labels]="chartLabels"
+            [colors]="chartColors"
+            [legend]="true">
+    </canvas>
+  </div>
+

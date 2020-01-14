@@ -1,0 +1,45 @@
+.chartStudent {
+  width: 420px;
+  height: 270px;
+  display: block;
+  border: 2px solid #4285f4;
+  margin: 30px;
+}
+
+.titlu {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+  padding: 20px;
+  font-size: 30px;
+  color: #4285f4;
+  font-weight: bolder;
+}
+.charturi {
+  display: flex;
+}
+
+section {
+  display:flex;
+  justify-content: space-around;
+}
+
+.numeStudent {
+  color: #4285f4;
+  font-weight: bolder;
+  font-size:20px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px; }
+
+
+#teamChart {
+  width: 500px;
+  height: 500px;
+  margin-right: 0;
+}
+
+#team {
+  width: 700px;
+  height: 700px;
+}

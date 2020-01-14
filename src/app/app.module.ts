@@ -90,6 +90,8 @@ import { TeamSupportComponent } from './components/team-support/team-support.com
 import { TeamSupportSmartComponent } from './containers/team-support-smart/team-support-smart.component';
 import { TeamStudentsComponent } from './components/team-students/team-students.component';
 import { TeamStudentsSmartComponent } from './containers/team-students-smart/team-students-smart.component';
+import { TeamChartsComponent } from './components/team-charts/team-charts.component';
+import { TeamChartsSmartComponent } from './containers/team-charts-smart/team-charts-smart.component';
 
 @NgModule({
   declarations: [
@@ -138,7 +140,9 @@ import { TeamStudentsSmartComponent } from './containers/team-students-smart/tea
     TeamSupportComponent,
     TeamSupportSmartComponent,
     TeamStudentsComponent,
-    TeamStudentsSmartComponent
+    TeamStudentsSmartComponent,
+    TeamChartsComponent,
+    TeamChartsSmartComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
