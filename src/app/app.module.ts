@@ -150,7 +150,7 @@ import { TeamChartsSmartComponent } from './containers/team-charts-smart/team-ch
     TeamStudentsComponent,
     TeamStudentsSmartComponent,
     TeamChartsComponent,
-    TeamChartsSmartComponent
+    TeamChartsSmartComponent,
     ProfessorPageSmartComponent,
     QuestionsAndAnswersPageComponent,
     QuestionsAndAnswersPageSmartComponent
