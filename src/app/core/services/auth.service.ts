@@ -6,7 +6,7 @@ import {User} from '../models/user';
   providedIn: 'root'
 })
 export class AuthService {
-  private authUser: User;
+  private authUser: User = null;
 
   users: User[] = [
     {userId: 1, username: 'student1', password: 'student1', role: 'STUDENT'},
@@ -23,7 +23,7 @@ export class AuthService {
   }
 
   get user() {
-    return this.authUser;
+    return this.authUser || JSON.parse(localStorage.getItem('user'));
   }
 
   onLogin(username: string, password: string) {
@@ -38,6 +38,7 @@ export class AuthService {
   }
 
   logout() {
+    localStorage.removeItem('user');
     this.user = null;
   }
 

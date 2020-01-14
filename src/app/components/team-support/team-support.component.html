@@ -1,0 +1,34 @@
+<div class="col" >
+
+  <div class="courses_view ">
+    <div *ngFor="let team of teams">
+      <mdb-card>
+
+        <mdb-card-img [src]="team.image" alt="Team image " style="height: 200px"></mdb-card-img>
+
+        <mdb-card-body>
+
+          <mdb-card-title>
+            <h4>{{team.name}}</h4>
+          </mdb-card-title>
+
+          <mdb-card-text>
+            <p>{{team.description}} </p>
+          </mdb-card-text>
+
+          <div class="go_to_course_page_button">
+            <button mdbBtn color="blue" [disabled] ="team.persons.length > 0" mdbWavesEffect (click)="newTeam(team)">Select your team!</button>
+          </div>
+
+          <div class="go_to_course_page_button">
+            <button mdbBtn color="blue" [disabled] ="team.persons.length === 0" mdbWavesEffect (click)="seeCharts()">See your team !</button>
+          </div>
+        </mdb-card-body>
+
+      </mdb-card>
+
+    </div>
+
+  </div>
+
+</div>

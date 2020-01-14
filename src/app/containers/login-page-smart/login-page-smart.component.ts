@@ -33,6 +33,7 @@ export class LoginPageSmartComponent implements OnInit {
 
     const user = this.authService.onLogin(username, password);
     if (user) {
+      localStorage.setItem('user', JSON.stringify(user));
       this.authService.user = user;
       this.router.navigateByUrl('home');
     } else {

@@ -92,6 +92,12 @@ import { CoursesEnrollmentSmartComponent } from './containers/courses-enrollment
 import { ProfessorPageComponent } from './components/professor-page/professor-page.component';
 import { ProfessorPageSmartComponent } from './containers/professor-page-smart/professor-page-smart.component';
 import { QuestionsAndAnswersPageSmartComponent } from './containers/questions-and-answers-page-smart/questions-and-answers-page-smart.component';
+import { TeamSupportComponent } from './components/team-support/team-support.component';
+import { TeamSupportSmartComponent } from './containers/team-support-smart/team-support-smart.component';
+import { TeamStudentsComponent } from './components/team-students/team-students.component';
+import { TeamStudentsSmartComponent } from './containers/team-students-smart/team-students-smart.component';
+import { TeamChartsComponent } from './components/team-charts/team-charts.component';
+import { TeamChartsSmartComponent } from './containers/team-charts-smart/team-charts-smart.component';
 
 @NgModule({
   declarations: [
@@ -138,6 +144,13 @@ import { QuestionsAndAnswersPageSmartComponent } from './containers/questions-an
     CoursesEnrollmentComponent,
     CoursesEnrollmentSmartComponent,
     ProfessorPageComponent,
+    ProfessorPageSmartComponent,
+    TeamSupportComponent,
+    TeamSupportSmartComponent,
+    TeamStudentsComponent,
+    TeamStudentsSmartComponent,
+    TeamChartsComponent,
+    TeamChartsSmartComponent
     ProfessorPageSmartComponent,
     QuestionsAndAnswersPageComponent,
     QuestionsAndAnswersPageSmartComponent

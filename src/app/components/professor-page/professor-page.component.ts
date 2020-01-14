@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {style} from '@angular/animations';
-
 @Component({
   selector: 'app-professor-page',
   templateUrl: './professor-page.component.html',
