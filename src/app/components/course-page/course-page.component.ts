@@ -33,6 +33,9 @@ export class CoursePageComponent implements OnInit {
     seeBibliography() {
         this.router.navigateByUrl('course/' + this.course.name + '/bibliography');
     }
+    navigateToQandA() {
+        this.router.navigateByUrl('course/' + this.course.name + '/qanda');
+    }
 
     onEnterCode(event) {
         console.log(event);

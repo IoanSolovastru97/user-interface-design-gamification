@@ -22,8 +22,10 @@ import {LivestreamOnlineSmartComponent} from './containers/livestream-smart/live
 import {DebateTimeSmartComponent} from './containers/livestream-smart/livestream-online-smart/debate-time-smart/debate-time-smart.component';
 import {MiniGameSmartComponent} from './containers/livestream-smart/livestream-online-smart/mini-game-smart/mini-game-smart.component';
 import {AuthGuard} from './auth.guard';
+import { NotificationPageSmartComponent } from './containers/notification-page-smart/notification-page-smart.component';
 
 import {ProfessorPageSmartComponent} from './containers/professor-page-smart/professor-page-smart.component';
+import { QuestionsAndAnswersPageSmartComponent } from './containers/questions-and-answers-page-smart/questions-and-answers-page-smart.component';
 import {TeamSupportSmartComponent} from './containers/team-support-smart/team-support-smart.component';
 import {TeamStudentsSmartComponent} from './containers/team-students-smart/team-students-smart.component';
 import {TeamChartsSmartComponent} from './containers/team-charts-smart/team-charts-smart.component';
@@ -45,7 +47,9 @@ const routes: Routes = [
   {path: 'course/:name/bibliography', component: BibliographyPageSmartComponent},
   {path: 'book/:title', component: BookPageSmartComponent},
   {path: 'course/:name/quiz', component: QuizPageSmartComponent},
+  {path: 'course/:name/qanda', component: QuestionsAndAnswersPageSmartComponent},
   {path: 'quiz-check', component: QuizCheckPageSmartComponent},
+  {path: 'home/notification', component: NotificationPageSmartComponent},
   {path: 'skills/hard', component: SkillsPageSmartComponent},
   {path: 'room-reservation', component: RoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
   {path: 'room-reservation/create', component: CreateRoomReservationSmartComponent, data: {role: 'PROFESSOR'}, canActivate : [AuthGuard]},
